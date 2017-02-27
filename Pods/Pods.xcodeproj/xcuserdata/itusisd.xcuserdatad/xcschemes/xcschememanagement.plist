@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PKHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ViseoResto.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,7 +47,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>46A1F97B65AF1282F5A65D3D4211C6EE</key>
+		<key>6D01770A86AFB4C7EF2C03F33D871114</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,12 +62,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C2999043400B140F95A6D3B4659FFABD</key>
+		<key>A3F84104CA7EB6B343B98860D40B4553</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E02D1CD338818FE7C0FDEBCE31A594E1</key>
+		<key>D7A75F149082140741FC1E0B5B2863C8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ED050BAFF1E893C492BC7774DB8C2E6E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

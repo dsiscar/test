@@ -18,6 +18,10 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func customersBtnAction(_ sender: Any) {
+        let customerVC = CustomersRouter.assembleModule()
+        self.navigationController?.pushViewController(customerVC, animated: true)
+    }
     
     
 }
