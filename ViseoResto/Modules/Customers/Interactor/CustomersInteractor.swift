@@ -13,21 +13,10 @@ import AlamofireObjectMapper
 import RxSwift
 
 class CustomersInteractor: CustomersUseCase {
-    
-    weak var output: CustomersInteractorOutput!
+
     private var disposeBag = DisposeBag()
     
-    func fetchCustomers() {
-        CustomerApiService
-            .fetchCustomers()
-            .subscribe(
-                onNext: { customers in
-                    self.output.customersFetched(customers)
-            },
-                onError: { error in
-                    self.output.customersFetchFailed()
-            }
-            )
-            .addDisposableTo(disposeBag)
+    func fetchCustomers() -> Observable<[Customer]> {
+        return CustomerApiService.fetchCustomers()
     }
 }

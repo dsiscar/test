@@ -32,8 +32,6 @@ class CustomersRouter: CustomersWireframe {
         presenter.interactor = interactor
         presenter.router = router
         
-        interactor.output = presenter
-        
         router.viewController = view
         
         return navigation

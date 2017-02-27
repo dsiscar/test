@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 protocol CustomersView: IndicatableView {
     var presenter: CustomersPresentation! { get set }
@@ -24,14 +25,7 @@ protocol CustomersPresentation {
 }
 
 protocol CustomersUseCase: class {
-    weak var output: CustomersInteractorOutput! { get set }
-    
-    func fetchCustomers()
-}
-
-protocol CustomersInteractorOutput: class {
-    func customersFetched(_ customers: [Customer])
-    func customersFetchFailed()
+    func fetchCustomers() -> Observable<[Customer]>
 }
 
 protocol CustomersWireframe: class {

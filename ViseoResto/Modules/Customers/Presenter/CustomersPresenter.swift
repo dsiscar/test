@@ -7,12 +7,14 @@
 //
 
 import Foundation
+import RxSwift
 
 class CustomersPresenter: CustomersPresentation {
     
     weak var view: CustomersView?
     var interactor: CustomersUseCase!
     var router: CustomersWireframe!
+    let disposeBag = DisposeBag()
     
     var customers: [Customer] = [] {
         didSet {
@@ -25,23 +27,18 @@ class CustomersPresenter: CustomersPresentation {
     }
     
     func viewDidLoad() {
-        interactor.fetchCustomers()
         view?.showActivityIndicator()
+        
+        interactor.fetchCustomers().subscribe(onNext: { customers in
+            self.customers = customers
+        }, onError: { error in
+            self.view?.showNoContentScreen()
+        }, onCompleted: {
+            self.view?.hideActivityIndicator()
+        }).addDisposableTo(disposeBag)
     }
     
     func didSelectCustomer(_ customer: Customer) {
         router.presentDetails(forCustomer: customer)
-    }
-}
-
-extension CustomersPresenter: CustomersInteractorOutput {    
-    func customersFetched(_ customers: [Customer]) {
-        self.customers = customers
-        view?.hideActivityIndicator()
-    }
-    
-    internal func customersFetchFailed() {
-        view?.showNoContentScreen()
-        view?.hideActivityIndicator()
     }
 }
