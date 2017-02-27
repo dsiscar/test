@@ -1,0 +1,668 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5714C7D41E6458E200B8DD8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5714C7D31E6458E200B8DD8B /* ViewController.swift */; };
+		5714C7E71E6458E200B8DD8B /* ViseoRestoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5714C7E61E6458E200B8DD8B /* ViseoRestoTests.swift */; };
+		5714C7F21E6458E300B8DD8B /* ViseoRestoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5714C7F11E6458E300B8DD8B /* ViseoRestoUITests.swift */; };
+		5714C8011E64591900B8DD8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5714C8001E64591900B8DD8B /* AppDelegate.swift */; };
+		5714C8091E64593B00B8DD8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5714C8031E64593B00B8DD8B /* Assets.xcassets */; };
+		5714C80A1E64593B00B8DD8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5714C8041E64593B00B8DD8B /* LaunchScreen.storyboard */; };
+		5714C80E1E64598900B8DD8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5714C80D1E64598900B8DD8B /* Main.storyboard */; };
+		5714C8101E6459A100B8DD8B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5714C80F1E6459A100B8DD8B /* Info.plist */; };
+		5EA404F4ACC1141F7892DEC5 /* Pods_ViseoResto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C68B4C93F9DE9073AB5DA901 /* Pods_ViseoResto.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5714C7E31E6458E200B8DD8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5714C7C61E6458E200B8DD8B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5714C7CD1E6458E200B8DD8B;
+			remoteInfo = ViseoResto;
+		};
+		5714C7EE1E6458E200B8DD8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5714C7C61E6458E200B8DD8B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5714C7CD1E6458E200B8DD8B;
+			remoteInfo = ViseoResto;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5714C7CE1E6458E200B8DD8B /* ViseoResto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViseoResto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5714C7D31E6458E200B8DD8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5714C7E21E6458E200B8DD8B /* ViseoRestoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViseoRestoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5714C7E61E6458E200B8DD8B /* ViseoRestoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViseoRestoTests.swift; sourceTree = "<group>"; };
+		5714C7E81E6458E200B8DD8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5714C7ED1E6458E200B8DD8B /* ViseoRestoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViseoRestoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5714C7F11E6458E300B8DD8B /* ViseoRestoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViseoRestoUITests.swift; sourceTree = "<group>"; };
+		5714C7F31E6458E300B8DD8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5714C8001E64591900B8DD8B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5714C8031E64593B00B8DD8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5714C8051E64593B00B8DD8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5714C80D1E64598900B8DD8B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		5714C80F1E6459A100B8DD8B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6603BABF56C73607D36D859 /* Pods-ViseoResto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViseoResto.release.xcconfig"; path = "Pods/Target Support Files/Pods-ViseoResto/Pods-ViseoResto.release.xcconfig"; sourceTree = "<group>"; };
+		C68B4C93F9DE9073AB5DA901 /* Pods_ViseoResto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViseoResto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB9DF10EC015B5CE6BC44CF3 /* Pods-ViseoResto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViseoResto.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ViseoResto/Pods-ViseoResto.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5714C7CB1E6458E200B8DD8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EA404F4ACC1141F7892DEC5 /* Pods_ViseoResto.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5714C7DF1E6458E200B8DD8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5714C7EA1E6458E200B8DD8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5714C7C51E6458E200B8DD8B = {
+			isa = PBXGroup;
+			children = (
+				5714C7D01E6458E200B8DD8B /* ViseoResto */,
+				5714C7E51E6458E200B8DD8B /* ViseoRestoTests */,
+				5714C7F01E6458E300B8DD8B /* ViseoRestoUITests */,
+				5714C7CF1E6458E200B8DD8B /* Products */,
+				EC45ABE864EA2FB65A5558EC /* Pods */,
+				AF47F1FE06FD96ABA51ED6B8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5714C7CF1E6458E200B8DD8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5714C7CE1E6458E200B8DD8B /* ViseoResto.app */,
+				5714C7E21E6458E200B8DD8B /* ViseoRestoTests.xctest */,
+				5714C7ED1E6458E200B8DD8B /* ViseoRestoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5714C7D01E6458E200B8DD8B /* ViseoResto */ = {
+			isa = PBXGroup;
+			children = (
+				57D6E9BA1E64614300E162EC /* Models */,
+				57D6E9BB1E64614300E162EC /* Modules */,
+				57D6E9BC1E64614300E162EC /* Network */,
+				5714C8021E64593B00B8DD8B /* Ressources */,
+				5714C7FF1E64591900B8DD8B /* Application */,
+				5714C7D31E6458E200B8DD8B /* ViewController.swift */,
+				5714C80D1E64598900B8DD8B /* Main.storyboard */,
+			);
+			path = ViseoResto;
+			sourceTree = "<group>";
+		};
+		5714C7E51E6458E200B8DD8B /* ViseoRestoTests */ = {
+			isa = PBXGroup;
+			children = (
+				5714C7E61E6458E200B8DD8B /* ViseoRestoTests.swift */,
+				5714C7E81E6458E200B8DD8B /* Info.plist */,
+			);
+			path = ViseoRestoTests;
+			sourceTree = "<group>";
+		};
+		5714C7F01E6458E300B8DD8B /* ViseoRestoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5714C7F11E6458E300B8DD8B /* ViseoRestoUITests.swift */,
+				5714C7F31E6458E300B8DD8B /* Info.plist */,
+			);
+			path = ViseoRestoUITests;
+			sourceTree = "<group>";
+		};
+		5714C7FF1E64591900B8DD8B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				5714C8001E64591900B8DD8B /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		5714C8021E64593B00B8DD8B /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				5714C8031E64593B00B8DD8B /* Assets.xcassets */,
+				5714C8041E64593B00B8DD8B /* LaunchScreen.storyboard */,
+				5714C80F1E6459A100B8DD8B /* Info.plist */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		57D6E9BA1E64614300E162EC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		57D6E9BB1E64614300E162EC /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		57D6E9BC1E64614300E162EC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		AF47F1FE06FD96ABA51ED6B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C68B4C93F9DE9073AB5DA901 /* Pods_ViseoResto.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC45ABE864EA2FB65A5558EC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB9DF10EC015B5CE6BC44CF3 /* Pods-ViseoResto.debug.xcconfig */,
+				C6603BABF56C73607D36D859 /* Pods-ViseoResto.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5714C7CD1E6458E200B8DD8B /* ViseoResto */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5714C7F61E6458E300B8DD8B /* Build configuration list for PBXNativeTarget "ViseoResto" */;
+			buildPhases = (
+				AB31E5083CC56F8908006EBD /* [CP] Check Pods Manifest.lock */,
+				5714C7CA1E6458E200B8DD8B /* Sources */,
+				5714C7CB1E6458E200B8DD8B /* Frameworks */,
+				5714C7CC1E6458E200B8DD8B /* Resources */,
+				2CC062D73F1471F247A59286 /* [CP] Embed Pods Frameworks */,
+				C776E3609EA9DEACEBC2F4A7 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ViseoResto;
+			productName = ViseoResto;
+			productReference = 5714C7CE1E6458E200B8DD8B /* ViseoResto.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5714C7E11E6458E200B8DD8B /* ViseoRestoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5714C7F91E6458E300B8DD8B /* Build configuration list for PBXNativeTarget "ViseoRestoTests" */;
+			buildPhases = (
+				5714C7DE1E6458E200B8DD8B /* Sources */,
+				5714C7DF1E6458E200B8DD8B /* Frameworks */,
+				5714C7E01E6458E200B8DD8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5714C7E41E6458E200B8DD8B /* PBXTargetDependency */,
+			);
+			name = ViseoRestoTests;
+			productName = ViseoRestoTests;
+			productReference = 5714C7E21E6458E200B8DD8B /* ViseoRestoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5714C7EC1E6458E200B8DD8B /* ViseoRestoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5714C7FC1E6458E300B8DD8B /* Build configuration list for PBXNativeTarget "ViseoRestoUITests" */;
+			buildPhases = (
+				5714C7E91E6458E200B8DD8B /* Sources */,
+				5714C7EA1E6458E200B8DD8B /* Frameworks */,
+				5714C7EB1E6458E200B8DD8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5714C7EF1E6458E200B8DD8B /* PBXTargetDependency */,
+			);
+			name = ViseoRestoUITests;
+			productName = ViseoRestoUITests;
+			productReference = 5714C7ED1E6458E200B8DD8B /* ViseoRestoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5714C7C61E6458E200B8DD8B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Viseo;
+				TargetAttributes = {
+					5714C7CD1E6458E200B8DD8B = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					5714C7E11E6458E200B8DD8B = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5714C7CD1E6458E200B8DD8B;
+					};
+					5714C7EC1E6458E200B8DD8B = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5714C7CD1E6458E200B8DD8B;
+					};
+				};
+			};
+			buildConfigurationList = 5714C7C91E6458E200B8DD8B /* Build configuration list for PBXProject "ViseoResto" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5714C7C51E6458E200B8DD8B;
+			productRefGroup = 5714C7CF1E6458E200B8DD8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5714C7CD1E6458E200B8DD8B /* ViseoResto */,
+				5714C7E11E6458E200B8DD8B /* ViseoRestoTests */,
+				5714C7EC1E6458E200B8DD8B /* ViseoRestoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5714C7CC1E6458E200B8DD8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5714C8101E6459A100B8DD8B /* Info.plist in Resources */,
+				5714C8091E64593B00B8DD8B /* Assets.xcassets in Resources */,
+				5714C80A1E64593B00B8DD8B /* LaunchScreen.storyboard in Resources */,
+				5714C80E1E64598900B8DD8B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5714C7E01E6458E200B8DD8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5714C7EB1E6458E200B8DD8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2CC062D73F1471F247A59286 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ViseoResto/Pods-ViseoResto-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB31E5083CC56F8908006EBD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C776E3609EA9DEACEBC2F4A7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ViseoResto/Pods-ViseoResto-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5714C7CA1E6458E200B8DD8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5714C8011E64591900B8DD8B /* AppDelegate.swift in Sources */,
+				5714C7D41E6458E200B8DD8B /* ViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5714C7DE1E6458E200B8DD8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5714C7E71E6458E200B8DD8B /* ViseoRestoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5714C7E91E6458E200B8DD8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5714C7F21E6458E300B8DD8B /* ViseoRestoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5714C7E41E6458E200B8DD8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5714C7CD1E6458E200B8DD8B /* ViseoResto */;
+			targetProxy = 5714C7E31E6458E200B8DD8B /* PBXContainerItemProxy */;
+		};
+		5714C7EF1E6458E200B8DD8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5714C7CD1E6458E200B8DD8B /* ViseoResto */;
+			targetProxy = 5714C7EE1E6458E200B8DD8B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5714C8041E64593B00B8DD8B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5714C8051E64593B00B8DD8B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5714C7F41E6458E300B8DD8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5714C7F51E6458E300B8DD8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5714C7F71E6458E300B8DD8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB9DF10EC015B5CE6BC44CF3 /* Pods-ViseoResto.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ViseoResto/Ressources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"AlamofireObjectMapper\"",
+					"-framework",
+					"\"ObjectMapper\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxSwift\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.novediagroup.ViseoResto;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		5714C7F81E6458E300B8DD8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6603BABF56C73607D36D859 /* Pods-ViseoResto.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ViseoResto/Ressources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"AlamofireObjectMapper\"",
+					"-framework",
+					"\"ObjectMapper\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxSwift\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.novediagroup.ViseoResto;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		5714C7FA1E6458E300B8DD8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ViseoRestoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.novediagroup.ViseoRestoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ViseoResto.app/ViseoResto";
+			};
+			name = Debug;
+		};
+		5714C7FB1E6458E300B8DD8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ViseoRestoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.novediagroup.ViseoRestoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ViseoResto.app/ViseoResto";
+			};
+			name = Release;
+		};
+		5714C7FD1E6458E300B8DD8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = ViseoRestoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.novediagroup.ViseoRestoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = ViseoResto;
+			};
+			name = Debug;
+		};
+		5714C7FE1E6458E300B8DD8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = ViseoRestoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.novediagroup.ViseoRestoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = ViseoResto;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5714C7C91E6458E200B8DD8B /* Build configuration list for PBXProject "ViseoResto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5714C7F41E6458E300B8DD8B /* Debug */,
+				5714C7F51E6458E300B8DD8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5714C7F61E6458E300B8DD8B /* Build configuration list for PBXNativeTarget "ViseoResto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5714C7F71E6458E300B8DD8B /* Debug */,
+				5714C7F81E6458E300B8DD8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5714C7F91E6458E300B8DD8B /* Build configuration list for PBXNativeTarget "ViseoRestoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5714C7FA1E6458E300B8DD8B /* Debug */,
+				5714C7FB1E6458E300B8DD8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5714C7FC1E6458E300B8DD8B /* Build configuration list for PBXNativeTarget "ViseoRestoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5714C7FD1E6458E300B8DD8B /* Debug */,
+				5714C7FE1E6458E300B8DD8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5714C7C61E6458E200B8DD8B /* Project object */;
+}
