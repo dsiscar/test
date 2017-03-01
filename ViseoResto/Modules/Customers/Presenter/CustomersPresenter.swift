@@ -26,7 +26,7 @@ class CustomersPresenter: CustomersPresentation {
         }
     }
     
-    func viewDidLoad() {
+    func fetchCustomerData() {
         view?.showLoader()
         
         interactor.fetchCustomers().subscribe(onNext: { customers in

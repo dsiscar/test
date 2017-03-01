@@ -22,8 +22,6 @@ class LoginRouter: LoginWireframe {
         let interactor = LoginInteractor()
         let router = LoginRouter()
         
-        let navigation = UINavigationController(rootViewController: view)
-        
         view.presenter = presenter
         
         presenter.view = view
@@ -32,12 +30,13 @@ class LoginRouter: LoginWireframe {
         
         router.viewController = view
         
-        return navigation
+        return view
     }
     
-    func showDashboard() {
+    func loginToList() {
         let customerVC = CustomersRouter.assembleModule()
-        viewController?.navigationController?.pushViewController(customerVC, animated: true)
+        
+        viewController?.navigationController?.present(customerVC, animated: true)
     }
     
 }

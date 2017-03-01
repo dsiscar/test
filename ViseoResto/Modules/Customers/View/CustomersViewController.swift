@@ -25,7 +25,7 @@ class CustomersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        presenter.viewDidLoad()
+        presenter.fetchCustomerData()
     }
     
     fileprivate func setupView() {

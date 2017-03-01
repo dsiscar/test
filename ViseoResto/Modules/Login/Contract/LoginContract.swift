@@ -29,7 +29,7 @@ protocol LoginUseCase: class {
 }
 
 protocol LoginWireframe: class {
-    func showDashboard()
+    func loginToList()
     
     static func assembleModule() -> UIViewController
 }

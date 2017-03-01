@@ -21,6 +21,6 @@ class LoginPresenter: LoginPresentation {
     }
     
     func login() {
-        router.showDashboard()
+        router.loginToList()
     }
 }

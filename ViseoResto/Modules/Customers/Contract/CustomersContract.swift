@@ -21,7 +21,7 @@ protocol CustomersPresentation {
     var interactor: CustomersUseCase! { get set }
     var router: CustomersWireframe! { get set }
     
-    func viewDidLoad()
+    func fetchCustomerData()
     func didSelectCustomer(_ customer: Customer)
 }
 
