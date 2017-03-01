@@ -12,7 +12,6 @@
 		5714C8011E64591900B8DD8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5714C8001E64591900B8DD8B /* AppDelegate.swift */; };
 		5714C8091E64593B00B8DD8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5714C8031E64593B00B8DD8B /* Assets.xcassets */; };
 		5714C80A1E64593B00B8DD8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5714C8041E64593B00B8DD8B /* LaunchScreen.storyboard */; };
-		5714C8101E6459A100B8DD8B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5714C80F1E6459A100B8DD8B /* Info.plist */; };
 		574DB5131E64756500936C42 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574DB5121E64756500936C42 /* Endpoints.swift */; };
 		574DB5151E64761100936C42 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574DB5141E64761100936C42 /* Customer.swift */; };
 		574DB5171E6476AD00936C42 /* CustomerAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574DB5161E6476AD00936C42 /* CustomerAPIService.swift */; };
@@ -27,6 +26,7 @@
 		574DB53E1E64817F00936C42 /* UIViewControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574DB53D1E64817F00936C42 /* UIViewControllerHelper.swift */; };
 		574DB5411E6484DE00936C42 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574DB5401E6484DE00936C42 /* RootRouter.swift */; };
 		574DB5431E6484F600936C42 /* RootContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574DB5421E6484F600936C42 /* RootContract.swift */; };
+		57735C371E673658004B5236 /* CustomersDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57735C361E673658004B5236 /* CustomersDetailViewController.swift */; };
 		57AA02D31E66CFF8004068CC /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA02D21E66CFF8004068CC /* LoginRouter.swift */; };
 		57AA02D71E66D12F004068CC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA02D61E66D12F004068CC /* LoginViewController.swift */; };
 		57AA02D91E66D16E004068CC /* LoginContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA02D81E66D16E004068CC /* LoginContract.swift */; };
@@ -80,6 +80,7 @@
 		574DB53D1E64817F00936C42 /* UIViewControllerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerHelper.swift; sourceTree = "<group>"; };
 		574DB5401E6484DE00936C42 /* RootRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		574DB5421E6484F600936C42 /* RootContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootContract.swift; sourceTree = "<group>"; };
+		57735C361E673658004B5236 /* CustomersDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomersDetailViewController.swift; sourceTree = "<group>"; };
 		57AA02D21E66CFF8004068CC /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		57AA02D61E66D12F004068CC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		57AA02D81E66D16E004068CC /* LoginContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginContract.swift; sourceTree = "<group>"; };
@@ -240,6 +241,7 @@
 			children = (
 				574DB5371E647B8900936C42 /* CustomersViewController.swift */,
 				574DB5391E647E4B00936C42 /* CustomersStoryboard.storyboard */,
+				57735C361E673658004B5236 /* CustomersDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -525,7 +527,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5714C8101E6459A100B8DD8B /* Info.plist in Resources */,
 				5714C8091E64593B00B8DD8B /* Assets.xcassets in Resources */,
 				574DB53A1E647E4B00936C42 /* CustomersStoryboard.storyboard in Resources */,
 				57AA02DF1E66D7B4004068CC /* Main.storyboard in Resources */,
@@ -609,6 +610,7 @@
 				57AA02DD1E66D361004068CC /* LoginPresenter.swift in Sources */,
 				574DB5431E6484F600936C42 /* RootContract.swift in Sources */,
 				574DB5411E6484DE00936C42 /* RootRouter.swift in Sources */,
+				57735C371E673658004B5236 /* CustomersDetailViewController.swift in Sources */,
 				57AA02D91E66D16E004068CC /* LoginContract.swift in Sources */,
 				57AA02D31E66CFF8004068CC /* LoginRouter.swift in Sources */,
 				57AA02DB1E66D335004068CC /* LoginInteractor.swift in Sources */,

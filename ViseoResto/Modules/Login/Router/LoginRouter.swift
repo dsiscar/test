@@ -35,8 +35,7 @@ class LoginRouter: LoginWireframe {
     
     func loginToList() {
         let customerVC = CustomersRouter.assembleModule()
-        
-        viewController?.navigationController?.present(customerVC, animated: true)
+        viewController?.present(customerVC, animated: true)
     }
     
 }

@@ -10,11 +10,24 @@ import UIKit
 
 class CustomersRouter: CustomersWireframe {
     
-    weak var viewController: UIViewController?
+    weak var navController: UINavigationController?
+    
+    static func createDetailCustomer(_ customer: Customer) -> UIViewController {
+        guard let view = UIViewController.load(
+            fromStoryboard: "CustomersStoryboard", identifier: "CustomersDetailViewController") as? CustomersDetailViewController else {
+            return UIViewController()
+        }
+        
+        view.customer = customer
+        
+        return view
+    }
     
     static func assembleModule() -> UIViewController {
         
-        guard let view = UIViewController.load(fromStoryboard: "CustomersStoryboard", identifier: "CustomersViewController") as? CustomersViewController else  {
+        guard let navController = UIViewController.load(
+            fromStoryboard: "CustomersStoryboard", identifier: "CustomersNavController") as? UINavigationController,
+            let view = navController.childViewControllers.first as? CustomersViewController else {
             return UIViewController()
         }
         
@@ -28,15 +41,14 @@ class CustomersRouter: CustomersWireframe {
         presenter.interactor = interactor
         presenter.router = router
     
-        router.viewController = view
+        router.navController = navController
         
-        return view
+        return navController
     }
     
     
     func presentDetails(forCustomer customer: Customer) {
-        let alert = UIAlertController(title: "Customer", message: "Nom : \(customer.lastname)", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-        viewController?.present(alert, animated: true, completion: nil)
+        let controller = CustomersRouter.createDetailCustomer(customer)
+        navController?.pushViewController(controller, animated: true)
     }
 }

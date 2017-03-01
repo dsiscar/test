@@ -29,6 +29,8 @@ class CustomersViewController: UIViewController {
     }
     
     fileprivate func setupView() {
+        self.title = "CustomersTitle"
+        
         customers.asObservable()
             .bindTo(customersTableView
                 .rx
@@ -47,12 +49,17 @@ class CustomersViewController: UIViewController {
             .addDisposableTo(disposeBag)
     }
     
+    @IBAction func disconnectAction(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+    
 }
 
 extension CustomersViewController: CustomersView, ErrorManager {
 
     func showNoContentScreen(withError error: Error?) {
         guard let error = error else {
+            //TODO: hide tablevie and show a label with "Pas de résultat"
             var emptyCustomer = Customer()
             emptyCustomer.username = "Il n'y aucun résultat"
             self.customers.value = [emptyCustomer]
@@ -65,5 +72,7 @@ extension CustomersViewController: CustomersView, ErrorManager {
     func showCustomersData(_ customers: [Customer]) {
         self.customers.value = customers
     }
+    
+    
 }
 
