@@ -14,8 +14,6 @@ import RxSwift
 
 class CustomersInteractor: CustomersUseCase {
 
-    private var disposeBag = DisposeBag()
-    
     func fetchCustomers() -> Observable<[Customer]> {
         return CustomerApiService.fetchCustomers()
     }

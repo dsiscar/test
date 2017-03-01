@@ -9,10 +9,10 @@
 import UIKit
 import RxSwift
 
-protocol CustomersView: IndicatableView {
+protocol CustomersView: LoadingView {
     var presenter: CustomersPresentation! { get set }
     
-    func showNoContentScreen()
+    func showNoContentScreen(withError error: Error?)
     func showCustomersData(_ customers: [Customer])
 }
 
@@ -22,6 +22,7 @@ protocol CustomersPresentation {
     var router: CustomersWireframe! { get set }
     
     func viewDidLoad()
+    func didSelectCustomer(_ customer: Customer)
 }
 
 protocol CustomersUseCase: class {

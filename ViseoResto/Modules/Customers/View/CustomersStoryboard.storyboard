@@ -12,7 +12,7 @@
         <!--Customers View Controller-->
         <scene sceneID="Bpf-L0-XEy">
             <objects>
-                <viewController storyboardIdentifier="customersVC" id="Bnb-Jz-XEW" customClass="CustomersViewController" customModule="ViseoResto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CustomersViewController" id="Bnb-Jz-XEW" customClass="CustomersViewController" customModule="ViseoResto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="z7L-Nu-GHx"/>
                         <viewControllerLayoutGuide type="bottom" id="Iux-Mg-Yya"/>

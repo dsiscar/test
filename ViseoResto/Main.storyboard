@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ViseoResto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="ViseoResto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -25,7 +25,7 @@
                                 <rect key="frame" x="132.5" y="318.5" width="109" height="30"/>
                                 <state key="normal" title="Liste customers"/>
                                 <connections>
-                                    <action selector="customersBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LJP-9j-ULG"/>
+                                    <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1fQ-RX-YMf"/>
                                 </connections>
                             </button>
                         </subviews>

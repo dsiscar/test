@@ -9,9 +9,8 @@
 import UIKit
 
 class RootRouter: RootWireframe {
-    
-    func presentCustomersScreen(in window: UIWindow) {
+    func presentLoginScreen(in window: UIWindow) {
         window.makeKeyAndVisible()
-        window.rootViewController = CustomersRouter.assembleModule()
+        window.rootViewController = LoginRouter.assembleModule()
     }
 }

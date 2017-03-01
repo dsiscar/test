@@ -42,19 +42,24 @@ class CustomersViewController: UIViewController {
         customersTableView.rx
             .itemSelected
             .subscribe(onNext: { indexPath in
-                let alert = UIAlertController(title: "Customer", message: "Nom : \(self.customers.value[indexPath.row].lastname)", preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
+                self.presenter.didSelectCustomer(self.customers.value[indexPath.row])
             })
             .addDisposableTo(disposeBag)
     }
     
 }
 
-extension CustomersViewController: CustomersView {
-    
-    func showNoContentScreen() {
-        print("empty")
+extension CustomersViewController: CustomersView, ErrorManager {
+
+    func showNoContentScreen(withError error: Error?) {
+        guard let error = error else {
+            var emptyCustomer = Customer()
+            emptyCustomer.username = "Il n'y aucun résultat"
+            self.customers.value = [emptyCustomer]
+            return
+        }
+        
+        self.manageError(error)
     }
     
     func showCustomersData(_ customers: [Customer]) {

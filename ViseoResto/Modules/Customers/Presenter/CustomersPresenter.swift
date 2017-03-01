@@ -21,20 +21,20 @@ class CustomersPresenter: CustomersPresentation {
             if customers.count > 0 {
                 view?.showCustomersData(customers)
             } else {
-                view?.showNoContentScreen()
+                view?.showNoContentScreen(withError: nil)
             }
         }
     }
     
     func viewDidLoad() {
-        view?.showActivityIndicator()
+        view?.showLoader()
         
         interactor.fetchCustomers().subscribe(onNext: { customers in
             self.customers = customers
         }, onError: { error in
-            self.view?.showNoContentScreen()
-        }, onCompleted: {
-            self.view?.hideActivityIndicator()
+            self.view?.showNoContentScreen(withError: error)
+        }, onDisposed: {
+            self.view?.hideLoader()
         }).addDisposableTo(disposeBag)
     }
     

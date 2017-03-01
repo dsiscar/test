@@ -1,21 +1,20 @@
 //
-//  IndicatableViewExtension.swift
+//  LoadingViewExtension.swift
 //  ViseoResto
 //
 //  Created by SISCAR David (i-BP - CONSULTIME) on 27/02/2017.
 //  Copyright © 2017 Viseo. All rights reserved.
 //
 
-import Foundation
 import PKHUD
 
-extension IndicatableView where Self: UIViewController {
+extension LoadingView where Self: UIViewController {
     
-    func showActivityIndicator() {
+    func showLoader() {
         HUD.show(.progress)
     }
     
-    func hideActivityIndicator() {
+    func hideLoader() {
         HUD.hide()
     }
 }

@@ -6,8 +6,6 @@
 //  Copyright © 2017 Viseo. All rights reserved.
 //
 
-
-
 import UIKit
 
 class CustomersRouter: CustomersWireframe {
@@ -16,30 +14,29 @@ class CustomersRouter: CustomersWireframe {
     
     static func assembleModule() -> UIViewController {
         
-        guard let view = UIViewController.load(fromStoryboard: "CustomersStoryboard", identifier: "customersVC") as? CustomersViewController else  {
+        guard let view = UIViewController.load(fromStoryboard: "CustomersStoryboard", identifier: "CustomersViewController") as? CustomersViewController else  {
             return UIViewController()
         }
         
         let presenter = CustomersPresenter()
         let interactor = CustomersInteractor()
         let router = CustomersRouter()
-        
-        let navigation = UINavigationController(rootViewController: view)
-        
+    
         view.presenter = presenter
         
         presenter.view = view
         presenter.interactor = interactor
         presenter.router = router
-        
+    
         router.viewController = view
         
-        return navigation
+        return view
     }
     
     
     func presentDetails(forCustomer customer: Customer) {
-        //let detailsModuleViewController = DetailsRouter.assembleModule(article)
-        //viewController?.navigationController?.pushViewController(detailsModuleViewController, animated: true)
+        let alert = UIAlertController(title: "Customer", message: "Nom : \(customer.lastname)", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+        viewController?.present(alert, animated: true, completion: nil)
     }
 }
