@@ -1,5 +1,5 @@
 //
-//  CustomersContract.swift
+//  CustomersProtocols.swift
 //  ViseoResto
 //
 //  Created by SISCAR David (i-BP - CONSULTIME) on 27/02/2017.
@@ -9,7 +9,7 @@
 import UIKit
 import RxSwift
 
-protocol CustomersView: LoadingView {
+protocol CustomersView: LoadingView, ErrorManager {
     var presenter: CustomersPresentation! { get set }
     
     func showNoContentScreen(withError error: Error?)

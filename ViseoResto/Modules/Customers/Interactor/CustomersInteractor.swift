@@ -14,7 +14,7 @@ import RxSwift
 
 class CustomersInteractor: CustomersUseCase {
 
-    func fetchCustomers() -> Observable<[Customer]> {
+    internal func fetchCustomers() -> Observable<[Customer]> {
         return CustomerApiService.fetchCustomers()
     }
 }

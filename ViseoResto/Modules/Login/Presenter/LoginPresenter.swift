@@ -20,7 +20,16 @@ class LoginPresenter: LoginPresentation {
         print("coucou")
     }
     
-    func login() {
-        router.loginToList()
+    func login(_ username: String, password: String) {
+        view?.showLoader()
+        
+        interactor.loginUser(username, password: password).subscribe(onNext: { result in
+            self.router.loginToList()
+        }, onError: { error in
+            self.view?.manageError(error)
+        }) {
+            self.view?.hideLoader()
+        }.addDisposableTo(disposeBag)
+        
     }
 }

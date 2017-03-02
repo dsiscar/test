@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginAction(_ sender: Any) {
-        presenter.login()
+        presenter.login("tsalvetat", password: "12345")
     }
     
 }

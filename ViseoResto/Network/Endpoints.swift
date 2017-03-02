@@ -21,16 +21,24 @@ enum Endpoints {
     
     enum Customers: Endpoint {
         case fetch
+        case login
+        case logout
         
         public var path: String {
             switch self {
-            case .fetch: return "/customers/"
+            case .fetch:
+                return "/customers"
+            case .login:
+                return "/customers/login"
+            case .logout:
+                return "/customers/logout"
             }
         }
         
         public var url: String {
             switch self {
-            case .fetch: return "\(API.baseUrl)\(path)"
+            case .fetch, .login, .logout:
+                return "\(API.baseUrl)\(path)"
             }
         }
     }

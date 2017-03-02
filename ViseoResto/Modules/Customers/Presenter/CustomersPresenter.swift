@@ -33,9 +33,9 @@ class CustomersPresenter: CustomersPresentation {
             self.customers = customers
         }, onError: { error in
             self.view?.showNoContentScreen(withError: error)
-        }, onDisposed: {
+        }) {
             self.view?.hideLoader()
-        }).addDisposableTo(disposeBag)
+        }.addDisposableTo(disposeBag)
     }
     
     func didSelectCustomer(_ customer: Customer) {

@@ -55,7 +55,7 @@ class CustomersViewController: UIViewController {
     
 }
 
-extension CustomersViewController: CustomersView, ErrorManager {
+extension CustomersViewController: CustomersView {
 
     func showNoContentScreen(withError error: Error?) {
         guard let error = error else {

@@ -1,5 +1,5 @@
 //
-//  LoginContract.swift
+//  LoginProtocols.swift
 //  ViseoResto
 //
 //  Created by SISCAR David (i-BP - CONSULTIME) on 01/03/2017.
@@ -9,7 +9,7 @@
 import UIKit
 import RxSwift
 
-protocol LoginView: LoadingView {
+protocol LoginView: LoadingView, ErrorManager {
     var presenter: LoginPresentation! { get set }
     
     func toto()
@@ -21,11 +21,11 @@ protocol LoginPresentation {
     var router: LoginWireframe! { get set }
     
     func viewDidLoad()
-    func login()
+    func login(_ username: String, password: String)
 }
 
 protocol LoginUseCase: class {
-    func loginCustomer(customer: Customer)
+    func loginUser(_ username: String, password: String) -> Observable<Any>
 }
 
 protocol LoginWireframe: class {
