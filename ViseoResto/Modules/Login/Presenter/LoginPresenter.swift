@@ -24,12 +24,12 @@ class LoginPresenter: LoginPresentation {
         view?.showLoader()
         
         interactor.loginUser(username, password: password).subscribe(onNext: { result in
-            self.router.loginToList()
+            self.view?.loadingSucceed { (finished) in
+                self.router.loginToList()
+            }
         }, onError: { error in
-            self.view?.manageError(error)
-        }) {
-            self.view?.hideLoader()
-        }.addDisposableTo(disposeBag)
+            self.view?.loadingFailed(withError: error, completion: nil)
+        }).addDisposableTo(disposeBag)
         
     }
 }

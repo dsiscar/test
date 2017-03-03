@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57031D2C1E69C55D0099A371 /* NavigationBarTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57031D2B1E69C55D0099A371 /* NavigationBarTheme.swift */; };
+		57031D2E1E69C8390099A371 /* UIColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57031D2D1E69C8390099A371 /* UIColorHelper.swift */; };
 		5714C7E71E6458E200B8DD8B /* ViseoRestoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5714C7E61E6458E200B8DD8B /* ViseoRestoTests.swift */; };
 		5714C7F21E6458E300B8DD8B /* ViseoRestoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5714C7F11E6458E300B8DD8B /* ViseoRestoUITests.swift */; };
 		5714C8011E64591900B8DD8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5714C8001E64591900B8DD8B /* AppDelegate.swift */; };
@@ -55,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		57031D2B1E69C55D0099A371 /* NavigationBarTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarTheme.swift; sourceTree = "<group>"; };
+		57031D2D1E69C8390099A371 /* UIColorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorHelper.swift; sourceTree = "<group>"; };
 		5714C7CE1E6458E200B8DD8B /* ViseoResto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViseoResto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5714C7E21E6458E200B8DD8B /* ViseoRestoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViseoRestoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5714C7E61E6458E200B8DD8B /* ViseoRestoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViseoRestoTests.swift; sourceTree = "<group>"; };
@@ -119,6 +123,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		57031D2A1E69C54D0099A371 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				57031D2B1E69C55D0099A371 /* NavigationBarTheme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
 		5714C7C51E6458E200B8DD8B = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +197,7 @@
 		5714C8021E64593B00B8DD8B /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				57031D2A1E69C54D0099A371 /* Theme */,
 				5714C8031E64593B00B8DD8B /* Assets.xcassets */,
 				5714C8041E64593B00B8DD8B /* LaunchScreen.storyboard */,
 				5714C80F1E6459A100B8DD8B /* Info.plist */,
@@ -291,6 +304,7 @@
 			children = (
 				574DB5331E6479D300936C42 /* LoadingViewExtension.swift */,
 				574DB53D1E64817F00936C42 /* UIViewControllerHelper.swift */,
+				57031D2D1E69C8390099A371 /* UIColorHelper.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -617,10 +631,12 @@
 				574DB5341E6479D300936C42 /* LoadingViewExtension.swift in Sources */,
 				574DB5171E6476AD00936C42 /* CustomerAPIService.swift in Sources */,
 				57735C3D1E682724004B5236 /* CustomersProtocols.swift in Sources */,
+				57031D2C1E69C55D0099A371 /* NavigationBarTheme.swift in Sources */,
 				5714C8011E64591900B8DD8B /* AppDelegate.swift in Sources */,
 				574DB5361E647AD600936C42 /* CustomersPresenter.swift in Sources */,
 				57AA02E11E67030B004068CC /* ErrorManager.swift in Sources */,
 				57735C3A1E68271B004B5236 /* LoginProtocols.swift in Sources */,
+				57031D2E1E69C8390099A371 /* UIColorHelper.swift in Sources */,
 				574DB5131E64756500936C42 /* Endpoints.swift in Sources */,
 				57AA02D71E66D12F004068CC /* LoginViewController.swift in Sources */,
 				574DB5151E64761100936C42 /* Customer.swift in Sources */,

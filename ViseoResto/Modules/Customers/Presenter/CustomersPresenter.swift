@@ -21,7 +21,7 @@ class CustomersPresenter: CustomersPresentation {
             if customers.count > 0 {
                 view?.showCustomersData(customers)
             } else {
-                view?.showNoContentScreen(withError: nil)
+                view?.showNoContentScreen()
             }
         }
     }
@@ -30,15 +30,18 @@ class CustomersPresenter: CustomersPresentation {
         view?.showLoader()
         
         interactor.fetchCustomers().subscribe(onNext: { customers in
+            self.view?.hideLoader()
             self.customers = customers
         }, onError: { error in
-            self.view?.showNoContentScreen(withError: error)
-        }) {
-            self.view?.hideLoader()
-        }.addDisposableTo(disposeBag)
+            self.view?.loadingFailed(withError: error, completion: nil)
+        }).addDisposableTo(disposeBag)
     }
     
     func didSelectCustomer(_ customer: Customer) {
         router.presentDetails(forCustomer: customer)
+    }
+    
+    func logoff() {
+        print("presenter loggoff")
     }
 }

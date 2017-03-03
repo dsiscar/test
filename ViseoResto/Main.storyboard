@@ -28,10 +28,19 @@
                                     <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1fQ-RX-YMf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xhx-xX-PUE">
+                                <rect key="frame" x="149.5" y="385.5" width="76" height="30"/>
+                                <state key="normal" title="Error Login"/>
+                                <connections>
+                                    <action selector="errorLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7aP-sc-MAJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Xhx-xX-PUE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8yq-ut-We0"/>
                             <constraint firstItem="biS-jI-DyC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ew3-6i-dOd"/>
+                            <constraint firstItem="Xhx-xX-PUE" firstAttribute="top" secondItem="biS-jI-DyC" secondAttribute="bottom" constant="36.5" id="Hdw-F5-1ZO"/>
                             <constraint firstItem="biS-jI-DyC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vEL-jW-QI6"/>
                         </constraints>
                     </view>

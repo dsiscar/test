@@ -38,8 +38,8 @@ class CustomersViewController: UIViewController {
                        cellType: UITableViewCell.self)) {
                         row, customer, cell in
                         cell.textLabel?.text = customer.username
-        }
-        .addDisposableTo(disposeBag)
+            }
+            .addDisposableTo(disposeBag)
         
         customersTableView.rx
             .itemSelected
@@ -50,23 +50,20 @@ class CustomersViewController: UIViewController {
     }
     
     @IBAction func disconnectAction(_ sender: Any) {
+        //not like this tell presenter we logged off
         self.dismiss(animated: true)
     }
     
 }
 
 extension CustomersViewController: CustomersView {
-
-    func showNoContentScreen(withError error: Error?) {
-        guard let error = error else {
-            //TODO: hide tablevie and show a label with "Pas de résultat"
-            var emptyCustomer = Customer()
-            emptyCustomer.username = "Il n'y aucun résultat"
-            self.customers.value = [emptyCustomer]
-            return
-        }
+    
+    func showNoContentScreen() {
+        //TODO: hide tablevie and show a label with "Pas de résultat"
+        var emptyCustomer = Customer()
+        emptyCustomer.username = "Il n'y aucun résultat"
+        self.customers.value = [emptyCustomer]
         
-        self.manageError(error)
     }
     
     func showCustomersData(_ customers: [Customer]) {

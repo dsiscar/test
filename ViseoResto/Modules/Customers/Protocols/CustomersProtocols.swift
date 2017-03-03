@@ -9,10 +9,10 @@
 import UIKit
 import RxSwift
 
-protocol CustomersView: LoadingView, ErrorManager {
+protocol CustomersView: LoadingView {
     var presenter: CustomersPresentation! { get set }
     
-    func showNoContentScreen(withError error: Error?)
+    func showNoContentScreen()
     func showCustomersData(_ customers: [Customer])
 }
 

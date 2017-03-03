@@ -16,7 +16,6 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        presenter.viewDidLoad()
     }
     
     fileprivate func setupView() {
@@ -28,12 +27,13 @@ class LoginViewController: UIViewController {
         presenter.login("tsalvetat", password: "12345")
     }
     
+    @IBAction func errorLogin(_ sender: Any) {
+        presenter.login("tsalvetato", password: "123445")
+    }
 }
 
 
 extension LoginViewController: LoginView {
     
-    func toto() {
-        print("toto")
-    }
+    //here we add loginView protocols if needed
 }

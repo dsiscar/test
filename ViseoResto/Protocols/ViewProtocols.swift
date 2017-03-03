@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import PKHUD
 
 protocol ReusableView: class {}
 
@@ -15,4 +16,7 @@ protocol NibLoadableView: class {}
 protocol LoadingView: class {
     func showLoader()
     func hideLoader()
+    
+    func loadingSucceed(completion: LoadingCompletion?)
+    func loadingFailed(withError error: Error?, completion: LoadingCompletion?)
 }

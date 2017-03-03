@@ -9,10 +9,9 @@
 import UIKit
 import RxSwift
 
-protocol LoginView: LoadingView, ErrorManager {
+protocol LoginView: LoadingView {
     var presenter: LoginPresentation! { get set }
     
-    func toto()
 }
 
 protocol LoginPresentation {
@@ -20,7 +19,6 @@ protocol LoginPresentation {
     var interactor: LoginUseCase! { get set }
     var router: LoginWireframe! { get set }
     
-    func viewDidLoad()
     func login(_ username: String, password: String)
 }
 
