@@ -1,5 +1,5 @@
 //
-//  CustomerAPIService.swift
+//  CustomerService.swift
 //  ViseoResto
 //
 //  Created by SISCAR David (i-BP - CONSULTIME) on 27/02/2017.
@@ -11,9 +11,9 @@ import Alamofire
 import AlamofireObjectMapper
 import RxSwift
 
-class CustomerApiService {
+class CustomerService {
     
-    static func fetchCustomers() -> Observable<[Customer]> {
+    func fetchCustomers() -> Observable<[Customer]> {
         return Observable<[Customer]>.create { observer -> Disposable in
             let request = Alamofire
                 .request(Endpoints.Customers.fetch.url, method: .get)
@@ -36,7 +36,7 @@ class CustomerApiService {
         }
     }
     
-    static func login(loginName: String, password: String) -> Observable<Any> {
+    func login(loginName: String, password: String) -> Observable<Any> {
         
         let parameters = ["username" : loginName, "password" : password]
         

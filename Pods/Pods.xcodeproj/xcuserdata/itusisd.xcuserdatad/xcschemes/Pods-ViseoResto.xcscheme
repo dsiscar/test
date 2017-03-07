@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0820"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A3F84104CA7EB6B343B98860D40B4553"
+               BlueprintIdentifier = "9B121C4AB1263067B84F11070A327041"
                BuildableName = "Pods_ViseoResto.framework"
                BlueprintName = "Pods-ViseoResto"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A3F84104CA7EB6B343B98860D40B4553"
+            BlueprintIdentifier = "9B121C4AB1263067B84F11070A327041"
             BuildableName = "Pods_ViseoResto.framework"
             BlueprintName = "Pods-ViseoResto"
             ReferencedContainer = "container:Pods.xcodeproj">

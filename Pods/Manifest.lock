@@ -3,6 +3,7 @@ PODS:
   - AlamofireObjectMapper (4.0.1):
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 2.0)
+  - Dip (5.0.4)
   - ObjectMapper (2.2.2)
   - PKHUD (4.2.0)
   - RxCocoa (3.2.0):
@@ -12,6 +13,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - AlamofireObjectMapper (~> 4.0)
+  - Dip (~> 5.0.0)
   - PKHUD (~> 4.0)
   - RxCocoa (~> 3.0)
   - RxSwift (~> 3.0)
@@ -19,11 +21,12 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   AlamofireObjectMapper: 842d2eed43a4d0593ff0110d54ac86a170c4519c
+  Dip: 6460091adcf84ae8765f4927b85b49e6a3b67bfe
   ObjectMapper: 9e385c2295bcc4e16eabbcfc85db801442bba545
   PKHUD: 48af884cf00c2213b0313b739d914e6cab1c0f5e
   RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
 
-PODFILE CHECKSUM: 8f9b524c1091cfa3af8a21c064454be9ea6e4c27
+PODFILE CHECKSUM: 9dded8ff902b6442e6c7d56d8a11c803d0db4ec5
 
 COCOAPODS: 1.2.0
