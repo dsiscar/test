@@ -9,5 +9,5 @@
 import UIKit
 
 protocol RootWireframe: class {
-    func presentLoginScreen(in window: UIWindow)
+  func presentLoginScreen(in window: UIWindow)
 }

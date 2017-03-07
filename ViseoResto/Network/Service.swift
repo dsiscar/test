@@ -11,5 +11,5 @@ import Foundation
 import Alamofire
 
 class Service {
-    let sessionManager = Alamofire.SessionManager(configuration: URLSessionConfiguration.default)
+  let sessionManager = Alamofire.SessionManager(configuration: URLSessionConfiguration.default)
 }

@@ -9,46 +9,47 @@
 import UIKit
 
 class CustomersRouter: CustomersWireframe {
-    
-    weak var navController: UINavigationController?
-    
-    static func createDetailCustomer(_ customer: Customer) -> UIViewController {
-        guard let view = UIViewController.load(
-            fromStoryboard: "CustomersStoryboard", identifier: "CustomersDetailViewController") as? CustomersDetailViewController else {
-            return UIViewController()
-        }
-        
-        view.customer = customer
-        
-        return view
+  
+  weak var navController: UINavigationController?
+  
+  static func createDetailCustomer(_ customer: Customer) -> UIViewController {
+    guard let view = UIViewController.load(
+      fromStoryboard: "CustomersStoryboard",
+      identifier: "CustomersDetailViewController") as? CustomersDetailViewController else {
+        return UIViewController()
     }
     
-    static func assembleModule() -> UIViewController {
-        
-        guard let navController = UIViewController.load(
-            fromStoryboard: "CustomersStoryboard", identifier: "CustomersNavController") as? UINavigationController,
-            let view = navController.childViewControllers.first as? CustomersViewController else {
-            return UIViewController()
-        }
-        
-        let presenter = CustomersPresenter()
-        let interactor = try! DIPContainer.sharedContainer.resolve() as CustomersUseCase
-        let router = CustomersRouter()
+    view.customer = customer
     
-        view.presenter = presenter
-        
-        presenter.view = view
-        presenter.interactor = interactor
-        presenter.router = router
+    return view
+  }
+  
+  static func assembleModule() -> UIViewController {
     
-        router.navController = navController
-        
-        return navController
+    guard let navController = UIViewController.load(
+      fromStoryboard: "CustomersStoryboard",
+      identifier: "CustomersNavController") as? UINavigationController,
+      let view = navController.childViewControllers.first as? CustomersViewController,
+      let interactor = try? DIPContainer.sharedContainer.resolve() as CustomersUseCase else {
+        return UIViewController()
     }
     
+    let presenter = CustomersPresenter()
+    let router = CustomersRouter()
     
-    func presentDetails(forCustomer customer: Customer) {
-        let controller = CustomersRouter.createDetailCustomer(customer)
-        navController?.pushViewController(controller, animated: true)
-    }
+    view.presenter = presenter
+    
+    presenter.view = view
+    presenter.interactor = interactor
+    presenter.router = router
+    
+    router.navController = navController
+    
+    return navController
+  }
+  
+  func presentDetails(forCustomer customer: Customer) {
+    let controller = CustomersRouter.createDetailCustomer(customer)
+    navController?.pushViewController(controller, animated: true)
+  }
 }

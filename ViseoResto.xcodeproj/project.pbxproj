@@ -461,6 +461,7 @@
 				5714C7CC1E6458E200B8DD8B /* Resources */,
 				2CC062D73F1471F247A59286 /* [CP] Embed Pods Frameworks */,
 				C776E3609EA9DEACEBC2F4A7 /* [CP] Copy Pods Resources */,
+				575400161E6F159700D5D0F9 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -597,6 +598,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ViseoResto/Pods-ViseoResto-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		575400161E6F159700D5D0F9 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		AB31E5083CC56F8908006EBD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

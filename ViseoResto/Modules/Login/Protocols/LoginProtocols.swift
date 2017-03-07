@@ -10,25 +10,25 @@ import UIKit
 import RxSwift
 
 protocol LoginView: LoadingView {
-    var presenter: LoginPresentation! { get set }
-    
+  var presenter: LoginPresentation! { get set }
+  
 }
 
 protocol LoginPresentation {
-    weak var view: LoginView? { get set }
-    var interactor: LoginUseCase! { get set }
-    var router: LoginWireframe! { get set }
-    
-    func login(_ username: String, password: String)
+  weak var view: LoginView? { get set }
+  var interactor: LoginUseCase! { get set }
+  var router: LoginWireframe! { get set }
+  
+  func login(_ username: String, password: String)
 }
 
 protocol LoginUseCase: class {
-    var service: LoginService? { get set }
-    func loginUser(_ username: String, password: String) -> Observable<Any>?
+  var service: LoginService? { get set }
+  func loginUser(_ username: String, password: String) -> Observable<Any>?
 }
 
 protocol LoginWireframe: class {
-    func loginToList()
-    
-    static func assembleModule() -> UIViewController
+  func loginToList()
+  
+  static func assembleModule() -> UIViewController
 }

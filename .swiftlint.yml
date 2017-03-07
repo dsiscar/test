@@ -1,0 +1,21 @@
+disabled_rules:
+  - trailing_whitespace
+  - statement_position
+  - trailing_newline
+  - function_body_length
+  - file_length
+  - type_body_length
+  - variable_name
+  - shorthand_operator
+  - type_name
+
+line_length: 100
+
+# Limit the number of parameter in function
+function_parameter_count:
+- 5 #warning
+- 10 #error
+
+
+excluded:
+  - Pods/

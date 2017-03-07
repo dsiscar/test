@@ -9,15 +9,15 @@
 import UIKit
 
 class CustomersDetailViewController: UIViewController {
-
-    var customer: Customer!
+  
+  var customer: Customer!
+  
+  @IBOutlet weak var lastNameLabel: UILabel!
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
     
-    @IBOutlet weak var lastNameLabel: UILabel!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.title = customer.username
-        lastNameLabel.text = customer.lastname
-    }
+    self.title = customer.username
+    lastNameLabel.text = customer.lastname
+  }
 }

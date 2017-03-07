@@ -13,9 +13,9 @@ import AlamofireObjectMapper
 import RxSwift
 
 class CustomersInteractor: CustomersUseCase {
-    internal var service: CustomerService?
-    
-    internal func fetchCustomers() -> Observable<[Customer]>? {
-        return self.service?.fetchCustomers()
-    }
+  internal var service: CustomerService?
+  
+  internal func fetchCustomers() -> Observable<[Customer]>? {
+    return self.service?.fetchCustomers()
+  }
 }

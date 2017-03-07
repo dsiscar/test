@@ -9,5 +9,5 @@
 import UIKit
 
 extension UIColor {
-    static let blueViseo = UIColor(colorLiteralRed: 0.08, green: 0.59, blue: 0.88, alpha: 1.0)
+  static let blueViseo = UIColor(colorLiteralRed: 0.08, green: 0.59, blue: 0.88, alpha: 1.0)
 }
