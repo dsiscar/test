@@ -29,7 +29,7 @@ class CustomersPresenter: CustomersPresentation {
     func fetchCustomerData() {
         view?.showLoader()
         
-        interactor.fetchCustomers().subscribe(onNext: { customers in
+        interactor.fetchCustomers()?.subscribe(onNext: { customers in
             self.view?.hideLoader()
             self.customers = customers
         }, onError: { error in

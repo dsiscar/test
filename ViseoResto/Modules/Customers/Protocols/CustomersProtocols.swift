@@ -26,7 +26,8 @@ protocol CustomersPresentation {
 }
 
 protocol CustomersUseCase: class {
-    func fetchCustomers() -> Observable<[Customer]>
+    var service: CustomerService? { get set }
+    func fetchCustomers() -> Observable<[Customer]>?
 }
 
 protocol CustomersWireframe: class {

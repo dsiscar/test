@@ -1,5 +1,6 @@
 //
-//  SessionService.swift
+//  Service.swift
+
 //  ViseoResto
 //
 //  Created by SISCAR David (i-BP - CONSULTIME) on 06/03/2017.
@@ -7,3 +8,8 @@
 //
 
 import Foundation
+import Alamofire
+
+class Service {
+    let sessionManager = Alamofire.SessionManager(configuration: URLSessionConfiguration.default)
+}

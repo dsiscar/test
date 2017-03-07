@@ -32,7 +32,7 @@ class CustomersRouter: CustomersWireframe {
         }
         
         let presenter = CustomersPresenter()
-        let interactor = CustomersInteractor()
+        let interactor = try! DIPContainer.sharedContainer.resolve() as CustomersUseCase
         let router = CustomersRouter()
     
         view.presenter = presenter

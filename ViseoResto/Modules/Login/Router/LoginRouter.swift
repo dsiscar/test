@@ -19,7 +19,8 @@ class LoginRouter: LoginWireframe {
         }
         
         let presenter = LoginPresenter()
-        let interactor = LoginInteractor()
+        let interactor = try! DIPContainer.sharedContainer.resolve() as LoginUseCase
+
         let router = LoginRouter()
         
         view.presenter = presenter

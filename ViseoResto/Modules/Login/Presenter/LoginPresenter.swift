@@ -15,15 +15,10 @@ class LoginPresenter: LoginPresentation {
     var router: LoginWireframe!
     let disposeBag = DisposeBag()
     
-    func viewDidLoad() {
-        
-        print("coucou")
-    }
-    
     func login(_ username: String, password: String) {
         view?.showLoader()
         
-        interactor.loginUser(username, password: password).subscribe(onNext: { result in
+        interactor.loginUser(username, password: password)?.subscribe(onNext: { result in
             self.view?.loadingSucceed { (finished) in
                 self.router.loginToList()
             }

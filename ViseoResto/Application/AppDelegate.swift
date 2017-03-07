@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Dip
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         NavigationBarTheme().apply()
         window = UIWindow(frame: UIScreen.main.bounds)
+        
+        //DIP
+        DIPContainer.setup()
+
+        
         RootRouter().presentLoginScreen(in: window!)
         
         return true

@@ -14,8 +14,10 @@ import RxSwift
 
 class LoginInteractor: LoginUseCase {
     
-    internal func loginUser(_ username: String, password: String) -> Observable<Any> {
-        return CustomerApiService.login(loginName: username, password: password)
+    internal var service: LoginService?
+    
+    internal func loginUser(_ username: String, password: String) -> Observable<Any>? {
+        return self.service?.login(loginName: username, password: password)
     }
 
 }

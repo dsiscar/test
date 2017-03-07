@@ -23,7 +23,8 @@ protocol LoginPresentation {
 }
 
 protocol LoginUseCase: class {
-    func loginUser(_ username: String, password: String) -> Observable<Any>
+    var service: LoginService? { get set }
+    func loginUser(_ username: String, password: String) -> Observable<Any>?
 }
 
 protocol LoginWireframe: class {

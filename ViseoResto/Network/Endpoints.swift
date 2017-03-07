@@ -9,8 +9,8 @@
 import Foundation
 
 struct API {
-    static let baseUrl = "http://viseolab.ddns.net/api/"
-    static let ibpBaseUrl = "http://it0082qp.ctr.ibp:8080/api/"
+    static let baseUrl = "http://viseolab.ddns.net/api"
+    static let ibpBaseUrl = "http://it0082qp.ctr.ibp:8080/api"
     
 }
 
@@ -40,7 +40,7 @@ enum Endpoints {
         public var url: String {
             switch self {
             case .fetch, .login, .logout:
-                return "\(API.ibpBaseUrl)\(path)"
+                return "\(API.baseUrl)\(path)"
             }
         }
     }
