@@ -38,6 +38,7 @@
 		57AA02DD1E66D361004068CC /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA02DC1E66D361004068CC /* LoginPresenter.swift */; };
 		57AA02DF1E66D7B4004068CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57AA02DE1E66D7B4004068CC /* Main.storyboard */; };
 		57AA02E11E67030B004068CC /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA02E01E67030B004068CC /* ErrorManager.swift */; };
+		57AE67371E76D64300CEDD30 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AE67361E76D64300CEDD30 /* StringExtension.swift */; };
 		57F64BF61E6D742800DBAE02 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F64BF51E6D742800DBAE02 /* Service.swift */; };
 		5EA404F4ACC1141F7892DEC5 /* Pods_ViseoResto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C68B4C93F9DE9073AB5DA901 /* Pods_ViseoResto.framework */; };
 /* End PBXBuildFile section */
@@ -97,6 +98,7 @@
 		57AA02DC1E66D361004068CC /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		57AA02DE1E66D7B4004068CC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		57AA02E01E67030B004068CC /* ErrorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorManager.swift; sourceTree = "<group>"; };
+		57AE67361E76D64300CEDD30 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		57F64BF51E6D742800DBAE02 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		C6603BABF56C73607D36D859 /* Pods-ViseoResto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViseoResto.release.xcconfig"; path = "Pods/Target Support Files/Pods-ViseoResto/Pods-ViseoResto.release.xcconfig"; sourceTree = "<group>"; };
 		C68B4C93F9DE9073AB5DA901 /* Pods_ViseoResto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViseoResto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -311,6 +313,7 @@
 				574DB5331E6479D300936C42 /* LoadingViewExtension.swift */,
 				574DB53D1E64817F00936C42 /* UIViewControllerHelper.swift */,
 				57031D2D1E69C8390099A371 /* UIColorHelper.swift */,
+				57AE67361E76D64300CEDD30 /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -655,6 +658,7 @@
 				574DB5381E647B8900936C42 /* CustomersViewController.swift in Sources */,
 				574DB53C1E6480AC00936C42 /* CustomersRouter.swift in Sources */,
 				574DB53E1E64817F00936C42 /* UIViewControllerHelper.swift in Sources */,
+				57AE67371E76D64300CEDD30 /* StringExtension.swift in Sources */,
 				57AA02DD1E66D361004068CC /* LoginPresenter.swift in Sources */,
 				574DB5431E6484F600936C42 /* RootProtocols.swift in Sources */,
 				574DB5411E6484DE00936C42 /* RootRouter.swift in Sources */,
