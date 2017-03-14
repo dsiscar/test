@@ -32,6 +32,8 @@
 		57735C371E673658004B5236 /* CustomersDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57735C361E673658004B5236 /* CustomersDetailViewController.swift */; };
 		57735C3A1E68271B004B5236 /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57735C391E68271B004B5236 /* LoginProtocols.swift */; };
 		57735C3D1E682724004B5236 /* CustomersProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57735C3C1E682724004B5236 /* CustomersProtocols.swift */; };
+		57972E621E77E04700FD2B83 /* ReactiveExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57972E611E77E04700FD2B83 /* ReactiveExtension.swift */; };
+		57972E641E7822FF00FD2B83 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57972E631E7822FF00FD2B83 /* BaseTextField.swift */; };
 		57AA02D31E66CFF8004068CC /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA02D21E66CFF8004068CC /* LoginRouter.swift */; };
 		57AA02D71E66D12F004068CC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA02D61E66D12F004068CC /* LoginViewController.swift */; };
 		57AA02DB1E66D335004068CC /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA02DA1E66D335004068CC /* LoginInteractor.swift */; };
@@ -92,6 +94,8 @@
 		57735C361E673658004B5236 /* CustomersDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomersDetailViewController.swift; sourceTree = "<group>"; };
 		57735C391E68271B004B5236 /* LoginProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
 		57735C3C1E682724004B5236 /* CustomersProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomersProtocols.swift; sourceTree = "<group>"; };
+		57972E611E77E04700FD2B83 /* ReactiveExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveExtension.swift; sourceTree = "<group>"; };
+		57972E631E7822FF00FD2B83 /* BaseTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
 		57AA02D21E66CFF8004068CC /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		57AA02D61E66D12F004068CC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		57AA02DA1E66D335004068CC /* LoginInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
@@ -314,6 +318,8 @@
 				574DB53D1E64817F00936C42 /* UIViewControllerHelper.swift */,
 				57031D2D1E69C8390099A371 /* UIColorHelper.swift */,
 				57AE67361E76D64300CEDD30 /* StringExtension.swift */,
+				57972E611E77E04700FD2B83 /* ReactiveExtension.swift */,
+				57972E631E7822FF00FD2B83 /* BaseTextField.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -670,11 +676,13 @@
 				575400141E6EFFFD00D5D0F9 /* CustomerService.swift in Sources */,
 				57735C3D1E682724004B5236 /* CustomersProtocols.swift in Sources */,
 				57031D2C1E69C55D0099A371 /* NavigationBarTheme.swift in Sources */,
+				57972E641E7822FF00FD2B83 /* BaseTextField.swift in Sources */,
 				5714C8011E64591900B8DD8B /* AppDelegate.swift in Sources */,
 				574DB5361E647AD600936C42 /* CustomersPresenter.swift in Sources */,
 				57AA02E11E67030B004068CC /* ErrorManager.swift in Sources */,
 				57735C3A1E68271B004B5236 /* LoginProtocols.swift in Sources */,
 				57031D2E1E69C8390099A371 /* UIColorHelper.swift in Sources */,
+				57972E621E77E04700FD2B83 /* ReactiveExtension.swift in Sources */,
 				574DB5131E64756500936C42 /* Endpoints.swift in Sources */,
 				575400101E6EFF8D00D5D0F9 /* DIPContainer.swift in Sources */,
 				57AA02D71E66D12F004068CC /* LoginViewController.swift in Sources */,

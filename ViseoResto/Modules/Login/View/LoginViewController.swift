@@ -17,8 +17,8 @@ class LoginViewController: UIViewController {
   let minimalPasswordLength = 5
   let disposeBag = DisposeBag()
   
-  @IBOutlet weak var usernameTextField: UITextField!
-  @IBOutlet weak var passwordTextField: UITextField!
+  @IBOutlet weak var usernameTextField: BaseTextField!
+  @IBOutlet weak var passwordTextField: BaseTextField!
   @IBOutlet weak var loginButton: UIButton!
   @IBOutlet weak var errorLabel: UILabel!
   
@@ -31,9 +31,7 @@ class LoginViewController: UIViewController {
     errorLabel.text = "Error text lelelel"
     errorLabel.isHidden = true
     
-    //make an extension to textfield
-    self.usernameTextField.layer.borderWidth = 1
-    
+    //Setup conditions
     let usernameValid = usernameTextField.rx.text.orEmpty
       .map { $0.isValidEmail }
       .shareReplay(1)
@@ -50,26 +48,45 @@ class LoginViewController: UIViewController {
       .disposed(by: disposeBag)
     
     usernameValid
-      .map { $0 ? UIColor.green.cgColor : UIColor.red.cgColor }
-      .bindTo(usernameTextField.rx.borderColor)
+      .bindTo(usernameTextField.rx.isValid)
+      .disposed(by: disposeBag)
+  
+    passwordValid
+      .bindTo(passwordTextField.rx.isValid)
       .disposed(by: disposeBag)
     
     everythingValid
       .bindTo(loginButton.rx.isEnabled)
       .disposed(by: disposeBag)
     
-//    usernameTextField.rx.controlEvent(.editingDidEndOnExit).subscribe(onNext: { [unowned self] in
-//     //self?.manageError if usernamenotgood
-//    }).disposed(by: disposeBag)
+    //Setup Actions
+    passwordTextField.rx.controlEvent(.editingDidEndOnExit).subscribe(onNext: { [weak self] in
+      self?.callLogin()
+    }).disposed(by: disposeBag)
+    
+    usernameTextField.rx.controlEvent(.editingDidEndOnExit).subscribe(onNext: { [weak self] in
+      if self?.passwordTextField.isEnabled ?? false {
+        self?.errorLabel.isHidden = true
+        self?.passwordTextField.becomeFirstResponder()
+      }
+      else {
+        self?.errorLabel.isHidden = false
+      }
+    }).disposed(by: disposeBag)
     
     loginButton.rx.tap
       .subscribe(onNext: { [weak self] in
-        guard let user = self?.usernameTextField.text,
-          let pass = self?.passwordTextField.text else { return }
-        self?.presenter.login(user, password: pass)
-      })
-      .disposed(by: disposeBag)
-
+        self?.callLogin()
+      }).disposed(by: disposeBag)
+  }
+  
+  private func callLogin() {
+    guard let user = self.usernameTextField.text,
+      let pass = self.passwordTextField.text, loginButton.isEnabled else {
+        self.errorLabel.text = "check your "
+        return
+    }
+    self.presenter.login(user, password: pass)
   }
   
   @IBAction func errorLogin(_ sender: Any) {
