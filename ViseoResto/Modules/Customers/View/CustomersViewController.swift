@@ -38,14 +38,14 @@ class CustomersViewController: UIViewController {
                cellType: UITableViewCell.self)) { /*row*/_, customer, cell in
                 cell.textLabel?.text = customer.username
       }
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
     
     customersTableView.rx
       .itemSelected
       .subscribe(onNext: { indexPath in
         self.presenter.didSelectCustomer(self.customers.value[indexPath.row])
       })
-      .addDisposableTo(disposeBag)
+      .disposed(by: disposeBag)
   }
   
   @IBAction func disconnectAction(_ sender: Any) {

@@ -24,13 +24,42 @@ class LoginViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.addClosekeyboardTap()
+    
     setupView()
   }
   
   fileprivate func setupView() {
-    errorLabel.text = "Error text lelelel"
+    errorLabel.text = "Error on textfield"
     errorLabel.isHidden = true
     
+    self.setupRxConditions()
+    self.setupRxActions()
+  }
+  
+  fileprivate func callLogin() {
+    guard let user = usernameTextField.text,
+      let pass = passwordTextField.text, loginButton.isEnabled else {
+        errorLabel.text = "error on textfields"
+        errorLabel.isHidden = false
+        return
+    }
+    self.presenter.login(user, password: pass)
+  }
+  
+  @IBAction func errorLogin(_ sender: Any) {
+    presenter.login("tsalvetat", password: "12345")
+  }
+}
+
+extension LoginViewController: LoginView {
+  
+  //here we add loginView protocols if needed
+}
+
+extension LoginViewController {
+  
+  fileprivate func setupRxConditions() {
     //Setup conditions
     let usernameValid = usernameTextField.rx.text.orEmpty
       .map { $0.isValidEmail }
@@ -43,23 +72,24 @@ class LoginViewController: UIViewController {
     let everythingValid = Observable.combineLatest(usernameValid, passwordValid) { $0 && $1 }
       .shareReplay(1)
     
-    usernameValid
-      .bindTo(passwordTextField.rx.isEnabled)
-      .disposed(by: disposeBag)
+    usernameValid.bindTo(passwordTextField.rx.isEnabled).disposed(by: disposeBag)
     
-    usernameValid
-      .bindTo(usernameTextField.rx.isValid)
-      .disposed(by: disposeBag)
+    usernameValid.bindTo(usernameTextField.rx.isValid).disposed(by: disposeBag)
+    
+    passwordValid.bindTo(passwordTextField.rx.isValid).disposed(by: disposeBag)
+    
+    everythingValid.bindTo(loginButton.rx.isEnabled).disposed(by: disposeBag)
+  }
   
-    passwordValid
-      .bindTo(passwordTextField.rx.isValid)
-      .disposed(by: disposeBag)
+  fileprivate func setupRxActions() {
+    usernameTextField.rx.controlEvent(.editingDidBegin).subscribe(onNext: { [weak self] in
+      self?.errorLabel.isHidden = true
+    }).disposed(by: disposeBag)
     
-    everythingValid
-      .bindTo(loginButton.rx.isEnabled)
-      .disposed(by: disposeBag)
+    passwordTextField.rx.controlEvent(.editingDidBegin).subscribe(onNext: { [weak self] in
+      self?.errorLabel.isHidden = true
+    }).disposed(by: disposeBag)
     
-    //Setup Actions
     passwordTextField.rx.controlEvent(.editingDidEndOnExit).subscribe(onNext: { [weak self] in
       self?.callLogin()
     }).disposed(by: disposeBag)
@@ -79,22 +109,4 @@ class LoginViewController: UIViewController {
         self?.callLogin()
       }).disposed(by: disposeBag)
   }
-  
-  private func callLogin() {
-    guard let user = self.usernameTextField.text,
-      let pass = self.passwordTextField.text, loginButton.isEnabled else {
-        self.errorLabel.text = "check your "
-        return
-    }
-    self.presenter.login(user, password: pass)
-  }
-  
-  @IBAction func errorLogin(_ sender: Any) {
-    presenter.login("tsalvetato", password: "123445")
-  }
-}
-
-extension LoginViewController: LoginView {
-  
-  //here we add loginView protocols if needed
 }

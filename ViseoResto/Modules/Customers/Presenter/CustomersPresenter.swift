@@ -34,7 +34,7 @@ class CustomersPresenter: CustomersPresentation {
       self.customers = customers
     }, onError: { error in
       self.view?.loadingFailed(withError: error, completion: nil)
-    }).addDisposableTo(disposeBag)
+    }).disposed(by: disposeBag)
   }
   
   func didSelectCustomer(_ customer: Customer) {

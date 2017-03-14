@@ -26,6 +26,7 @@ public class BaseTextField: UITextField {
     self.spellCheckingType = .no
     self.autocorrectionType = .no
     self.borderStyle = .roundedRect
+    self.enablesReturnKeyAutomatically = true
   }
   
   public var isError: Bool = false {

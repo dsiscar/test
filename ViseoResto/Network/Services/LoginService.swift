@@ -14,7 +14,8 @@ class LoginService: Service {
   
   func login(loginName: String, password: String) -> Observable<Any> {
     
-    let parameters = ["username": loginName, "password": password]
+    let parameters =  loginName.isValidEmail ?
+    ["email": loginName, "password": password] : ["username": loginName, "password": password]
     
     return Observable<Any>.create { observer -> Disposable in
       let request = self.sessionManager

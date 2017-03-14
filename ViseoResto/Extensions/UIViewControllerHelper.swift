@@ -27,4 +27,14 @@ extension UIViewController {
     return storyboardRef.instantiateViewController(withIdentifier: controller)
   }
   
+  ///Add a UITapGestureRecognizer to the view to handle a tap and close keyboard
+  func addClosekeyboardTap() {
+    let tapGesture = UITapGestureRecognizer(
+      target: self, action: #selector(self.closeKeyboard))
+    self.view.addGestureRecognizer(tapGesture)
+  }
+  
+  func closeKeyboard() {
+    self.view.endEditing(true)
+  }
 }

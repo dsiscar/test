@@ -24,7 +24,6 @@ class LoginPresenter: LoginPresentation {
       }
     }, onError: { error in
       self.view?.loadingFailed(withError: error, completion: nil)
-    }).addDisposableTo(disposeBag)
-    
+    }).disposed(by: disposeBag)
   }
 }
