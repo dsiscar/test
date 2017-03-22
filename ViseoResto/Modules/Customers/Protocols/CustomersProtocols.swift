@@ -16,7 +16,7 @@ protocol CustomersView: LoadingView {
   func showCustomersData(_ customers: [Customer])
 }
 
-protocol CustomersPresentation {
+protocol CustomersPresentation: class {
   weak var view: CustomersView? { get set }
   var interactor: CustomersUseCase! { get set }
   var router: CustomersWireframe! { get set }

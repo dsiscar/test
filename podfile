@@ -8,7 +8,7 @@ target 'ViseoResto' do
   pod 'RxSwift', '~> 3.0'
   pod 'RxCocoa', '~> 3.0'
   pod 'PKHUD', '~> 4.0'
-  pod 'Dip', '~> 5.0.0'
+  pod 'Swinject', '~> 2.0.0'
 end
 
 post_install do |installer|

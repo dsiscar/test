@@ -13,6 +13,7 @@ typealias LoadingCompletion = (Bool) -> Void
 extension LoadingView where Self: UIViewController {
   
   func showLoader() {
+    self.view.endEditing(true)
     HUD.dimsBackground = false
     HUD.show(.progress)
   }

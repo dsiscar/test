@@ -31,7 +31,10 @@ public class BaseTextField: UITextField {
   
   public var isError: Bool = false {
     didSet {
-      let condition = isError && self.isEditing && self.isEnabled
+      guard let empty = text?.isEmpty, !empty else {
+        return
+      }
+      let condition = isError && self.isEnabled
       self.layer.borderColor = condition ? UIColor.red.cgColor : UIColor.darkGray.cgColor
       self.layer.borderWidth = condition ? 2 : 1
     }

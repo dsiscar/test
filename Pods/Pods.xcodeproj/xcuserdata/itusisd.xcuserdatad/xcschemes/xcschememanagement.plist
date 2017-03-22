@@ -14,11 +14,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Dip.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -44,15 +39,35 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Swinject.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2B78FFF4C7C94A60D51D95CCA80A2F1A</key>
+		<key>0DF68063A872378273480E656F01E556</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>2F5622F3B18DF497981AB58C6D1FC72F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5D6AA24D5BE92F0993240AC7F8E19A71</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6E8FEE884986F99B5DAAF90C455B5FD9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>87A46C2CBCCBE1314DE049024F6446D3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,22 +82,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9B121C4AB1263067B84F11070A327041</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B515A5A8BEB7E75735AF8F3554E5DCC2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>D7A75F149082140741FC1E0B5B2863C8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DA010989BA56B7654B100A2D67B65708</key>
 		<dict>
 			<key>primary</key>
 			<true/>

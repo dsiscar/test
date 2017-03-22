@@ -2,7 +2,7 @@
 //  LoginViewController.swift
 //  ViseoResto
 //
-//  Created by SISCAR David (i-BP - CONSULTIME) on 01/03/2017.
+//  Created SISCAR David (i-BP - CONSULTIME) on 22/03/2017.
 //  Copyright © 2017 Viseo. All rights reserved.
 //
 
@@ -10,12 +10,18 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class LoginViewController: UIViewController {
-  var presenter: LoginPresentation!
+protocol LoginView: LoadingView {
+  
+}
+
+class LoginViewController: UIViewController, LoginView {
+  
+  var presenter: LoginPresenter?
   
   let minimalUsernameLength = 6
   let minimalPasswordLength = 5
   let disposeBag = DisposeBag()
+  var userError: Observable<Bool>?
   
   @IBOutlet weak var usernameTextField: BaseTextField!
   @IBOutlet weak var passwordTextField: BaseTextField!
@@ -30,9 +36,6 @@ class LoginViewController: UIViewController {
   }
   
   fileprivate func setupView() {
-    errorLabel.text = "Error on textfield"
-    errorLabel.isHidden = true
-    
     self.setupRxConditions()
     self.setupRxActions()
   }
@@ -40,21 +43,29 @@ class LoginViewController: UIViewController {
   fileprivate func callLogin() {
     guard let user = usernameTextField.text,
       let pass = passwordTextField.text, loginButton.isEnabled else {
-        errorLabel.text = "error on textfields"
-        errorLabel.isHidden = false
+        self.showError(withMessage: "error on textfields")
         return
     }
-    self.presenter.login(user, password: pass)
+    self.presenter?.login(user, password: pass)
   }
   
   @IBAction func errorLogin(_ sender: Any) {
-    presenter.login("tsalvetat", password: "12345")
+    presenter?.login("tsalvetat", password: "12345")
   }
-}
-
-extension LoginViewController: LoginView {
   
-  //here we add loginView protocols if needed
+  func showError(withMessage message: String? = "Une erreur est survenue") {
+    self.errorLabel.text = message
+    UIView.animate(withDuration: 0.35) {
+      self.errorLabel.alpha = 1
+    }
+  }
+  
+  func hideError() {
+    self.errorLabel.text = ""
+    UIView.animate(withDuration: 0.35) {
+      self.errorLabel.alpha = 0
+    }
+  }
 }
 
 extension LoginViewController {
@@ -63,31 +74,32 @@ extension LoginViewController {
     //Setup conditions
     let usernameValid = usernameTextField.rx.text.orEmpty
       .map { $0.isValidEmail }
+      .debug()
       .shareReplay(1)
     
     let passwordValid = passwordTextField.rx.text.orEmpty
       .map { $0.characters.count >= self.minimalPasswordLength }
+      .debug()
       .shareReplay(1)
     
     let everythingValid = Observable.combineLatest(usernameValid, passwordValid) { $0 && $1 }
       .shareReplay(1)
-    
-    usernameValid.bindTo(passwordTextField.rx.isEnabled).disposed(by: disposeBag)
     
     usernameValid.bindTo(usernameTextField.rx.isValid).disposed(by: disposeBag)
     
     passwordValid.bindTo(passwordTextField.rx.isValid).disposed(by: disposeBag)
     
     everythingValid.bindTo(loginButton.rx.isEnabled).disposed(by: disposeBag)
+    
   }
   
   fileprivate func setupRxActions() {
     usernameTextField.rx.controlEvent(.editingDidBegin).subscribe(onNext: { [weak self] in
-      self?.errorLabel.isHidden = true
+      self?.hideError()
     }).disposed(by: disposeBag)
     
     passwordTextField.rx.controlEvent(.editingDidBegin).subscribe(onNext: { [weak self] in
-      self?.errorLabel.isHidden = true
+      self?.hideError()
     }).disposed(by: disposeBag)
     
     passwordTextField.rx.controlEvent(.editingDidEndOnExit).subscribe(onNext: { [weak self] in
@@ -95,12 +107,9 @@ extension LoginViewController {
     }).disposed(by: disposeBag)
     
     usernameTextField.rx.controlEvent(.editingDidEndOnExit).subscribe(onNext: { [weak self] in
-      if self?.passwordTextField.isEnabled ?? false {
-        self?.errorLabel.isHidden = true
+      self?.hideError()
+      if let _ = self?.passwordTextField.text?.isEmpty {
         self?.passwordTextField.becomeFirstResponder()
-      }
-      else {
-        self?.errorLabel.isHidden = false
       }
     }).disposed(by: disposeBag)
     

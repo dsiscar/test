@@ -8,8 +8,10 @@ disabled_rules:
   - variable_name
   - shorthand_operator
   - type_name
+  - force_cast
+  - force_try
 
-line_length: 100
+line_length: 120
 
 # Limit the number of parameter in function
 function_parameter_count:

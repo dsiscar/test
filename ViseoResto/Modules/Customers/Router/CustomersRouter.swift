@@ -29,21 +29,9 @@ class CustomersRouter: CustomersWireframe {
     guard let navController = UIViewController.load(
       fromStoryboard: "CustomersStoryboard",
       identifier: "CustomersNavController") as? UINavigationController,
-      let view = navController.childViewControllers.first as? CustomersViewController,
-      let interactor = try? DIPContainer.sharedContainer.resolve() as CustomersUseCase else {
+      let view = navController.childViewControllers.first as? CustomersViewController else {
         return UIViewController()
     }
-    
-    let presenter = CustomersPresenter()
-    let router = CustomersRouter()
-    
-    view.presenter = presenter
-    
-    presenter.view = view
-    presenter.interactor = interactor
-    presenter.router = router
-    
-    router.navController = navController
     
     return navController
   }

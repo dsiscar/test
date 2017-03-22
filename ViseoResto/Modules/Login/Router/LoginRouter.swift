@@ -2,42 +2,33 @@
 //  LoginRouter.swift
 //  ViseoResto
 //
-//  Created by SISCAR David (i-BP - CONSULTIME) on 01/03/2017.
+//  Created SISCAR David (i-BP - CONSULTIME) on 22/03/2017.
 //  Copyright © 2017 Viseo. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import Swinject
 
-class LoginRouter: LoginWireframe {
+protocol LoginRouter {
+  func loginToList()
+}
+
+class LoginDefaultRouter: LoginRouter {
   
   weak var viewController: UIViewController?
   
-  static func assembleModule() -> UIViewController {
-    
-    guard let view = UIViewController.load(
-      fromStoryboard: "Main", identifier: "LoginViewController") as? LoginViewController,
-      let interactor = try? DIPContainer.sharedContainer.resolve() as LoginUseCase else {
-      return UIViewController()
-    }
-    
-    let presenter = LoginPresenter()
-    
-    let router = LoginRouter()
-    
-    view.presenter = presenter
-    
-    presenter.view = view
-    presenter.interactor = interactor
-    presenter.router = router
-    
-    router.viewController = view
-    
-    return view
+  init (viewController: UIViewController) {
+    self.viewController = viewController
   }
+  
+//  fileprivate func customerBuilder() -> CustomerBuilder? {
+//    return Container.sharedContainer.resolve(CustomerBuilder.self)
+//  }
   
   func loginToList() {
-    let customerVC = CustomersRouter.assembleModule()
-    viewController?.present(customerVC, animated: true)
+//    if let customerVC = self.customerBuilder()?.buildCustomerModule() {
+//      let navController = UINavigationController(rootViewController: customerVC)
+//      self.viewController?.present(navController, animated: true, completion: nil)
+//    }
   }
-  
 }

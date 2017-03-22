@@ -2,22 +2,26 @@
 //  LoginInteractor.swift
 //  ViseoResto
 //
-//  Created by SISCAR David (i-BP - CONSULTIME) on 01/03/2017.
+//  Created SISCAR David (i-BP - CONSULTIME) on 22/03/2017.
 //  Copyright © 2017 Viseo. All rights reserved.
 //
 
 import Foundation
-import Alamofire
-import ObjectMapper
-import AlamofireObjectMapper
 import RxSwift
 
-class LoginInteractor: LoginUseCase {
+public protocol LoginInteractor {
+  func loginUser(_ username: String, password: String) -> Observable<Any>?
+}
+
+class LoginDefaultInteractor: LoginInteractor {
   
-  internal var service: LoginService?
+  let loginService: LoginService
   
-  internal func loginUser(_ username: String, password: String) -> Observable<Any>? {
-    return self.service?.login(loginName: username, password: password)
+  required init(loginService: LoginService) {
+    self.loginService = loginService
   }
   
+  func loginUser(_ username: String, password: String) -> Observable<Any>? {
+    return loginService.login(loginName: username, password: password)
+  }
 }

@@ -2,18 +2,30 @@
 //  LoginPresenter.swift
 //  ViseoResto
 //
-//  Created by SISCAR David (i-BP - CONSULTIME) on 01/03/2017.
+//  Created SISCAR David (i-BP - CONSULTIME) on 22/03/2017.
 //  Copyright © 2017 Viseo. All rights reserved.
 //
+//
 
+import Foundation
 import RxSwift
 
-class LoginPresenter: LoginPresentation {
+protocol LoginPresenter: class {
+  func login(_ username: String, password: String)
+}
+
+class LoginDefaultPresenter: LoginPresenter {
   
-  weak var view: LoginView?
-  var interactor: LoginUseCase!
-  var router: LoginWireframe!
-  let disposeBag = DisposeBag()
+  fileprivate let interactor: LoginInteractor
+  fileprivate let router: LoginRouter
+  fileprivate weak var view: LoginView?
+  fileprivate let disposeBag = DisposeBag()
+
+  required init(interactor: LoginInteractor, router: LoginRouter, view: LoginView) {
+    self.interactor = interactor
+    self.router = router
+    self.view = view
+  }
   
   func login(_ username: String, password: String) {
     view?.showLoader()

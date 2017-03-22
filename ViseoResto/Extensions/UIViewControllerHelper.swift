@@ -38,3 +38,20 @@ extension UIViewController {
     self.view.endEditing(true)
   }
 }
+
+extension UIViewController {
+  /// The inferred controller's storyboard identifier.
+  /// This attribut can be overridden by any UIViewController classes.
+  /// - seealso: `AppStoryboard.viewController(withControllerType:)`
+  class var storyboardId: String {
+    return "\(self)"
+  }
+  
+  /// Instantiate the view controller from the given storyboard.
+  /// To find the correct instance of the view controller inside the storyboard, a storyboard identifier inference
+  /// if performed. The inferred storyboard identifier is the view controller's class name.
+  /// - seealso: `storyboardId`
+  static func instantiate(fromAppStoryboard storyboard: AppStoryboard) -> Self {
+    return storyboard.viewController(withControllerType: self)
+  }
+}

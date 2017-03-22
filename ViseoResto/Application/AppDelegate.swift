@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Dip
+import Swinject
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,12 +21,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     NavigationBarTheme().apply()
     window = UIWindow(frame: UIScreen.main.bounds)
     
-    //DIP
-    DIPContainer.setup()
+    guard let rootVc = self.loginModuleBuilder()?.buildLoginModule() else {
+      print("Login Module failed to build. Check your DI setup.")
+      return false
+    }
     
-    RootRouter().presentLoginScreen(in: window!)
-    
+    window?.rootViewController = rootVc
+    window?.makeKey()
+
     return true
+  }
+  
+  fileprivate func loginModuleBuilder() -> LoginBuilder? {
+    return Container.sharedContainer.resolve(LoginBuilder.self)
   }
   
   func applicationWillResignActive(_ application: UIApplication) {
