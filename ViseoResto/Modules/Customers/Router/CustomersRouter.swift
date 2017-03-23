@@ -2,42 +2,28 @@
 //  CustomersRouter.swift
 //  ViseoResto
 //
-//  Created by SISCAR David (i-BP - CONSULTIME) on 27/02/2017.
+//  Created SISCAR David (i-BP - CONSULTIME) on 23/03/2017.
 //  Copyright © 2017 Viseo. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import Swinject
 
-class CustomersRouter: CustomersWireframe {
+protocol CustomersRouter {
+  func presentDetails(forCustomer customer: Customer)
+}
+
+class CustomersDefaultRouter: CustomersRouter {
   
-  weak var navController: UINavigationController?
+  weak var viewController: UIViewController?
   
-  static func createDetailCustomer(_ customer: Customer) -> UIViewController {
-    guard let view = UIViewController.load(
-      fromStoryboard: "CustomersStoryboard",
-      identifier: "CustomersDetailViewController") as? CustomersDetailViewController else {
-        return UIViewController()
-    }
-    
-    view.customer = customer
-    
-    return view
-  }
-  
-  static func assembleModule() -> UIViewController {
-    
-    guard let navController = UIViewController.load(
-      fromStoryboard: "CustomersStoryboard",
-      identifier: "CustomersNavController") as? UINavigationController,
-      let view = navController.childViewControllers.first as? CustomersViewController else {
-        return UIViewController()
-    }
-    
-    return navController
+  init (viewController: UIViewController) {
+    self.viewController = viewController
   }
   
   func presentDetails(forCustomer customer: Customer) {
-    let controller = CustomersRouter.createDetailCustomer(customer)
-    navController?.pushViewController(controller, animated: true)
+    let details = CustomersDetailViewController.instantiate(fromAppStoryboard: .customers)
+    details.customer = customer
+    viewController?.navigationController?.pushViewController(details, animated: true)
   }
 }

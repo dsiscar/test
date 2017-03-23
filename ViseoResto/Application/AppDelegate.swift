@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Swinject
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,23 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(
     _ application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    
+  
     NavigationBarTheme().apply()
     window = UIWindow(frame: UIScreen.main.bounds)
-    
-    guard let rootVc = self.loginModuleBuilder()?.buildLoginModule() else {
-      print("Login Module failed to build. Check your DI setup.")
-      return false
-    }
-    
-    window?.rootViewController = rootVc
-    window?.makeKey()
 
+    let wireframe = RootRouter()
+    wireframe.bootstrap(onWindow: window!)
+    
     return true
-  }
-  
-  fileprivate func loginModuleBuilder() -> LoginBuilder? {
-    return Container.sharedContainer.resolve(LoginBuilder.self)
   }
   
   func applicationWillResignActive(_ application: UIApplication) {

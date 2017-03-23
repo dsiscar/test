@@ -11,11 +11,15 @@ import Alamofire
 import AlamofireObjectMapper
 import RxSwift
 
-class CustomerService: Service {
+protocol CustomerService: class {
+  func fetchCustomers() -> Observable<[Customer]>
+}
+
+class ApiCustomerService: CustomerService {
   
   func fetchCustomers() -> Observable<[Customer]> {
     return Observable<[Customer]>.create { observer -> Disposable in
-      let request = self.sessionManager
+      let request = Alamofire
         .request(Endpoints.Customers.fetch.url, method: .get)
         .validate()
         .responseArray(completionHandler: { (response: DataResponse<[Customer]>) in
@@ -36,4 +40,3 @@ class CustomerService: Service {
     }
   }
 }
-

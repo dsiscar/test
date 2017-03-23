@@ -13,7 +13,7 @@ protocol LoginRouter {
   func loginToList()
 }
 
-class LoginDefaultRouter: LoginRouter {
+class LoginDefaultRouter: LoginRouter, RootWireframe {
   
   weak var viewController: UIViewController?
   
@@ -21,14 +21,22 @@ class LoginDefaultRouter: LoginRouter {
     self.viewController = viewController
   }
   
-//  fileprivate func customerBuilder() -> CustomerBuilder? {
-//    return Container.sharedContainer.resolve(CustomerBuilder.self)
-//  }
+  func bootstrap(onWindow window: UIWindow) {
+    guard let viewController = viewController else {
+      print("Cannot bootstrap Login")
+      return
+    }
+    self.showRootViewController(viewController, inWindow: window)
+  }
+  
+  fileprivate func customersBuilder() -> CustomersBuilder? {
+    return Container.sharedContainer.resolve(CustomersBuilder.self)
+  }
   
   func loginToList() {
-//    if let customerVC = self.customerBuilder()?.buildCustomerModule() {
-//      let navController = UINavigationController(rootViewController: customerVC)
-//      self.viewController?.present(navController, animated: true, completion: nil)
-//    }
+    if let customerVC = self.customersBuilder()?.buildCustomersModule() {
+      let navController = UINavigationController(rootViewController: customerVC)
+      self.viewController?.present(navController, animated: true, completion: nil)
+    }
   }
 }

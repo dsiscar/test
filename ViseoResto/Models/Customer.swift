@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-struct Customer {
+public struct Customer {
   var firstname = ""
   var lastname = ""
   var username = ""
@@ -20,10 +20,10 @@ struct Customer {
 
 extension Customer: Mappable {
   
-  init?(map: Map) {
+  public init?(map: Map) {
   }
   
-  mutating func mapping(map: Map) {
+  mutating public func mapping(map: Map) {
     firstname       <- map["firstname"]
     lastname        <- map["lastname"]
     username        <- map["username"]

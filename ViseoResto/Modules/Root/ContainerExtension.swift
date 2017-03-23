@@ -13,10 +13,13 @@ extension Container {
   // We are still looking at the best way to achieve this with Swinject
   static let sharedContainer: Container = {
     let c = Container()
-    
+    //Register Login
     c.register(LoginService.self) { _ in ApiLoginService()}
     c.register(LoginBuilder.self) { _ in LoginSwiftInjectBuilder()}
     
+    //Register Customers
+    c.register(CustomerService.self) { _ in ApiCustomerService()}
+    c.register(CustomersBuilder.self) { _ in CustomersSwiftInjectBuilder()}
     return c
-  }() 
+  }()
 }

@@ -2,18 +2,25 @@
 //  CustomersPresenter.swift
 //  ViseoResto
 //
-//  Created by SISCAR David (i-BP - CONSULTIME) on 27/02/2017.
+//  Created SISCAR David (i-BP - CONSULTIME) on 23/03/2017.
 //  Copyright © 2017 Viseo. All rights reserved.
+//
 //
 
 import Foundation
 import RxSwift
 
-class CustomersPresenter: CustomersPresentation {
+protocol CustomersPresenter: class {
+  func fetchCustomerData()
+  func didSelectCustomer(_ customer: Customer)
+}
+
+class CustomersDefaultPresenter: CustomersPresenter {
   
-  weak var view: CustomersView?
-  var interactor: CustomersUseCase!
-  var router: CustomersWireframe!
+  fileprivate let interactor: CustomersInteractor
+  fileprivate let router: CustomersRouter
+  fileprivate weak var view: CustomersView?
+
   let disposeBag = DisposeBag()
   
   var customers: [Customer] = [] {
@@ -24,6 +31,12 @@ class CustomersPresenter: CustomersPresentation {
         view?.showNoContentScreen()
       }
     }
+  }
+  
+  required init(interactor: CustomersInteractor, router: CustomersRouter, view: CustomersView) {
+    self.interactor = interactor
+    self.router = router
+    self.view = view
   }
   
   func fetchCustomerData() {

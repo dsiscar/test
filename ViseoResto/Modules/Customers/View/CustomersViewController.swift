@@ -10,11 +10,16 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+protocol CustomersView: LoadingView {
+  func showNoContentScreen()
+  func showCustomersData(_ customers: [Customer])
+}
+
 class CustomersViewController: UIViewController {
   
   @IBOutlet weak var customersTableView: UITableView!
   
-  var presenter: CustomersPresentation!
+  var presenter: CustomersPresenter?
   var customers: Variable<[Customer]> = Variable([]) {
     didSet {
       customersTableView.reloadData()
@@ -25,7 +30,7 @@ class CustomersViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setupView()
-    presenter.fetchCustomerData()
+    presenter?.fetchCustomerData()
   }
   
   fileprivate func setupView() {
@@ -43,7 +48,7 @@ class CustomersViewController: UIViewController {
     customersTableView.rx
       .itemSelected
       .subscribe(onNext: { indexPath in
-        self.presenter.didSelectCustomer(self.customers.value[indexPath.row])
+        self.presenter?.didSelectCustomer(self.customers.value[indexPath.row])
       })
       .disposed(by: disposeBag)
   }
