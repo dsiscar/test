@@ -10,7 +10,7 @@ import Foundation
 import Swinject
 
 protocol CustomersRouter {
-  func presentDetails(forCustomer customer: Customer)
+  func showDetails(forCustomer customer: Customer)
 }
 
 class CustomersDefaultRouter: CustomersRouter {
@@ -21,7 +21,7 @@ class CustomersDefaultRouter: CustomersRouter {
     self.viewController = viewController
   }
   
-  func presentDetails(forCustomer customer: Customer) {
+  func showDetails(forCustomer customer: Customer) {
     let details = CustomersDetailViewController.instantiate(fromAppStoryboard: .customers)
     details.customer = customer
     viewController?.navigationController?.pushViewController(details, animated: true)

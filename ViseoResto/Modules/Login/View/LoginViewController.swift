@@ -36,6 +36,7 @@ class LoginViewController: UIViewController, LoginView {
   }
   
   fileprivate func setupView() {
+    self.view.backgroundColor = AppColor.backgroundColor
     self.setupRxConditions()
     self.setupRxActions()
   }
@@ -74,12 +75,10 @@ extension LoginViewController {
     //Setup conditions
     let usernameValid = usernameTextField.rx.text.orEmpty
       .map { $0.isValidEmail }
-      .debug()
       .shareReplay(1)
     
     let passwordValid = passwordTextField.rx.text.orEmpty
       .map { $0.characters.count >= self.minimalPasswordLength }
-      .debug()
       .shareReplay(1)
     
     let everythingValid = Observable.combineLatest(usernameValid, passwordValid) { $0 && $1 }

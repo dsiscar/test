@@ -23,15 +23,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biS-jI-DyC">
-                                <rect key="frame" x="132.5" y="318.5" width="109" height="30"/>
-                                <state key="normal" title="Liste customers"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xhx-xX-PUE">
-                                <rect key="frame" x="149.5" y="385.5" width="76" height="30"/>
-                                <state key="normal" title="Error Login"/>
-                                <connections>
-                                    <action selector="errorLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7aP-sc-MAJ"/>
-                                </connections>
+                                <rect key="frame" x="150.5" y="318.5" width="73" height="30"/>
+                                <state key="normal" title="Connexion"/>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VSa-gp-D5b" customClass="BaseTextField" customModule="ViseoResto" customModuleProvider="target">
                                 <rect key="frame" x="66" y="120" width="243" height="17"/>
@@ -59,10 +52,8 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ehX-Bs-5A6" firstAttribute="trailing" secondItem="VSa-gp-D5b" secondAttribute="trailing" id="5EZ-9c-ZoJ"/>
-                            <constraint firstItem="Xhx-xX-PUE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8yq-ut-We0"/>
                             <constraint firstItem="ehX-Bs-5A6" firstAttribute="top" secondItem="VSa-gp-D5b" secondAttribute="bottom" constant="20" id="Cxe-qK-QzK"/>
                             <constraint firstItem="biS-jI-DyC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ew3-6i-dOd"/>
-                            <constraint firstItem="Xhx-xX-PUE" firstAttribute="top" secondItem="biS-jI-DyC" secondAttribute="bottom" constant="36.5" id="Hdw-F5-1ZO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VSa-gp-D5b" secondAttribute="trailing" constant="50" id="MEp-7T-dbz"/>
                             <constraint firstItem="VSa-gp-D5b" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="N5D-Xh-VRe"/>
                             <constraint firstItem="TiP-Mq-jZm" firstAttribute="width" secondItem="ehX-Bs-5A6" secondAttribute="width" id="Rh8-rL-LJA"/>

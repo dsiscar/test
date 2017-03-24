@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Nimble.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,12 +34,32 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-ViseoRestoTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-ViseoRestoUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Quick.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>RxCocoa.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>RxSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,7 +72,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0DF68063A872378273480E656F01E556</key>
+		<key>0921CC2F4398BE9A4F1CEACB30684B56</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2E6CCCA56E4B2A8FF85CA3247C7E7314</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,17 +87,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5D6AA24D5BE92F0993240AC7F8E19A71</key>
+		<key>7B741F516D28006EEB8AE65922B6D0A8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6E8FEE884986F99B5DAAF90C455B5FD9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>87A46C2CBCCBE1314DE049024F6446D3</key>
+		<key>865D007C5BC9878CFE27FB1F2BC5B9F7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,7 +107,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>975B2DE5A41BC6A759FB81B4E097DEAD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A73513DB172B6772EE897C81B3ABEA02</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AAA0BE126A17F7FB75E1F848E458C22A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C18965F85025C6FEE53AC2CCE8A1AA8F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>D7A75F149082140741FC1E0B5B2863C8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DEF9D5CDC842D51A2A95F27294E617CA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -21,7 +21,6 @@
 		574DB5381E647B8900936C42 /* CustomersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574DB5371E647B8900936C42 /* CustomersViewController.swift */; };
 		574DB53A1E647E4B00936C42 /* CustomersStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 574DB5391E647E4B00936C42 /* CustomersStoryboard.storyboard */; };
 		574DB53E1E64817F00936C42 /* UIViewControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574DB53D1E64817F00936C42 /* UIViewControllerHelper.swift */; };
-		574DB5411E6484DE00936C42 /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574DB5401E6484DE00936C42 /* AppStoryboard.swift */; };
 		574DB5431E6484F600936C42 /* RootWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574DB5421E6484F600936C42 /* RootWireframe.swift */; };
 		575400101E6EFF8D00D5D0F9 /* ContainerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5754000F1E6EFF8D00D5D0F9 /* ContainerExtension.swift */; };
 		575400141E6EFFFD00D5D0F9 /* CustomerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575400121E6EFFFD00D5D0F9 /* CustomerService.swift */; };
@@ -42,7 +41,11 @@
 		57F484FF1E83CDE10049F475 /* CustomersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F484FE1E83CDE10049F475 /* CustomersInteractor.swift */; };
 		57F485011E83CDE80049F475 /* CustomersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F485001E83CDE80049F475 /* CustomersPresenter.swift */; };
 		57F485031E83CDED0049F475 /* CustomersRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F485021E83CDED0049F475 /* CustomersRouter.swift */; };
+		57F485071E8563810049F475 /* AppUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F485061E8563810049F475 /* AppUserDefault.swift */; };
+		57F485091E856A150049F475 /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F485081E856A150049F475 /* AppStoryboard.swift */; };
 		5EA404F4ACC1141F7892DEC5 /* Pods_ViseoResto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C68B4C93F9DE9073AB5DA901 /* Pods_ViseoResto.framework */; };
+		650AA6A4708B857AB7627928 /* Pods_ViseoRestoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50FC2BF29C985098E11E6200 /* Pods_ViseoRestoUITests.framework */; };
+		D2718FD423B32368220E34DE /* Pods_ViseoRestoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1720858A143A66EF78C4F2 /* Pods_ViseoRestoTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0338D744292704099F15C482 /* Pods-ViseoRestoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViseoRestoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ViseoRestoTests/Pods-ViseoRestoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0F114FDFA0B98B71383D38DC /* Pods-ViseoRestoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViseoRestoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ViseoRestoTests/Pods-ViseoRestoTests.release.xcconfig"; sourceTree = "<group>"; };
+		4E1720858A143A66EF78C4F2 /* Pods_ViseoRestoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViseoRestoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50FC2BF29C985098E11E6200 /* Pods_ViseoRestoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViseoRestoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57031D2B1E69C55D0099A371 /* NavigationBarTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarTheme.swift; sourceTree = "<group>"; };
 		57031D2D1E69C8390099A371 /* UIColorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorHelper.swift; sourceTree = "<group>"; };
 		5714C7CE1E6458E200B8DD8B /* ViseoResto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViseoResto.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,7 +90,6 @@
 		574DB5371E647B8900936C42 /* CustomersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomersViewController.swift; sourceTree = "<group>"; };
 		574DB5391E647E4B00936C42 /* CustomersStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CustomersStoryboard.storyboard; sourceTree = "<group>"; };
 		574DB53D1E64817F00936C42 /* UIViewControllerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerHelper.swift; sourceTree = "<group>"; };
-		574DB5401E6484DE00936C42 /* AppStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
 		574DB5421E6484F600936C42 /* RootWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootWireframe.swift; sourceTree = "<group>"; };
 		5754000F1E6EFF8D00D5D0F9 /* ContainerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerExtension.swift; sourceTree = "<group>"; };
 		575400121E6EFFFD00D5D0F9 /* CustomerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerService.swift; sourceTree = "<group>"; };
@@ -104,6 +110,10 @@
 		57F484FE1E83CDE10049F475 /* CustomersInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomersInteractor.swift; sourceTree = "<group>"; };
 		57F485001E83CDE80049F475 /* CustomersPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomersPresenter.swift; sourceTree = "<group>"; };
 		57F485021E83CDED0049F475 /* CustomersRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomersRouter.swift; sourceTree = "<group>"; };
+		57F485061E8563810049F475 /* AppUserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUserDefault.swift; sourceTree = "<group>"; };
+		57F485081E856A150049F475 /* AppStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
+		9BD073D97BBD7FE3EB6CC818 /* Pods-ViseoRestoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViseoRestoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ViseoRestoUITests/Pods-ViseoRestoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B5B55B01ECA8A612E7B90FC4 /* Pods-ViseoRestoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViseoRestoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ViseoRestoUITests/Pods-ViseoRestoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C6603BABF56C73607D36D859 /* Pods-ViseoResto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViseoResto.release.xcconfig"; path = "Pods/Target Support Files/Pods-ViseoResto/Pods-ViseoResto.release.xcconfig"; sourceTree = "<group>"; };
 		C68B4C93F9DE9073AB5DA901 /* Pods_ViseoResto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViseoResto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB9DF10EC015B5CE6BC44CF3 /* Pods-ViseoResto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViseoResto.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ViseoResto/Pods-ViseoResto.debug.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2718FD423B32368220E34DE /* Pods_ViseoRestoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				650AA6A4708B857AB7627928 /* Pods_ViseoRestoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +213,9 @@
 		5714C7FF1E64591900B8DD8B /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				57F485081E856A150049F475 /* AppStoryboard.swift */,
 				5714C8001E64591900B8DD8B /* AppDelegate.swift */,
+				57F485061E8563810049F475 /* AppUserDefault.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -327,7 +341,6 @@
 		574DB53F1E6484D100936C42 /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				574DB5401E6484DE00936C42 /* AppStoryboard.swift */,
 				574DB5421E6484F600936C42 /* RootWireframe.swift */,
 				5754000F1E6EFF8D00D5D0F9 /* ContainerExtension.swift */,
 				57F484EF1E83C4300049F475 /* RootRouter.swift */,
@@ -444,6 +457,8 @@
 			isa = PBXGroup;
 			children = (
 				C68B4C93F9DE9073AB5DA901 /* Pods_ViseoResto.framework */,
+				4E1720858A143A66EF78C4F2 /* Pods_ViseoRestoTests.framework */,
+				50FC2BF29C985098E11E6200 /* Pods_ViseoRestoUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -453,6 +468,10 @@
 			children = (
 				EB9DF10EC015B5CE6BC44CF3 /* Pods-ViseoResto.debug.xcconfig */,
 				C6603BABF56C73607D36D859 /* Pods-ViseoResto.release.xcconfig */,
+				0338D744292704099F15C482 /* Pods-ViseoRestoTests.debug.xcconfig */,
+				0F114FDFA0B98B71383D38DC /* Pods-ViseoRestoTests.release.xcconfig */,
+				9BD073D97BBD7FE3EB6CC818 /* Pods-ViseoRestoUITests.debug.xcconfig */,
+				B5B55B01ECA8A612E7B90FC4 /* Pods-ViseoRestoUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -485,9 +504,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5714C7F91E6458E300B8DD8B /* Build configuration list for PBXNativeTarget "ViseoRestoTests" */;
 			buildPhases = (
+				8136ABF133CB038160C64A82 /* [CP] Check Pods Manifest.lock */,
 				5714C7DE1E6458E200B8DD8B /* Sources */,
 				5714C7DF1E6458E200B8DD8B /* Frameworks */,
 				5714C7E01E6458E200B8DD8B /* Resources */,
+				3CD1F24A819D59A89064FADB /* [CP] Embed Pods Frameworks */,
+				A963141836ADD301E1D5D8A7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -503,9 +525,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5714C7FC1E6458E300B8DD8B /* Build configuration list for PBXNativeTarget "ViseoRestoUITests" */;
 			buildPhases = (
+				274AE0238C6C44B42EBCD963 /* [CP] Check Pods Manifest.lock */,
 				5714C7E91E6458E200B8DD8B /* Sources */,
 				5714C7EA1E6458E200B8DD8B /* Frameworks */,
 				5714C7EB1E6458E200B8DD8B /* Resources */,
+				5A92D3F28C4CFB1E834EB4F1 /* [CP] Embed Pods Frameworks */,
+				AAF949514E2CF8F96F1D94CB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -593,6 +618,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		274AE0238C6C44B42EBCD963 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		2CC062D73F1471F247A59286 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -608,6 +648,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ViseoResto/Pods-ViseoResto-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		3CD1F24A819D59A89064FADB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ViseoRestoTests/Pods-ViseoRestoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		575400161E6F159700D5D0F9 /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -621,6 +676,66 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		5A92D3F28C4CFB1E834EB4F1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ViseoRestoUITests/Pods-ViseoRestoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8136ABF133CB038160C64A82 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A963141836ADD301E1D5D8A7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ViseoRestoTests/Pods-ViseoRestoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAF949514E2CF8F96F1D94CB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ViseoRestoUITests/Pods-ViseoRestoUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		AB31E5083CC56F8908006EBD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -667,9 +782,9 @@
 				57AE67371E76D64300CEDD30 /* StringExtension.swift in Sources */,
 				57F484FF1E83CDE10049F475 /* CustomersInteractor.swift in Sources */,
 				574DB5431E6484F600936C42 /* RootWireframe.swift in Sources */,
-				574DB5411E6484DE00936C42 /* AppStoryboard.swift in Sources */,
 				57735C371E673658004B5236 /* CustomersDetailViewController.swift in Sources */,
 				57F485031E83CDED0049F475 /* CustomersRouter.swift in Sources */,
+				57F485091E856A150049F475 /* AppStoryboard.swift in Sources */,
 				57F484E81E82D5690049F475 /* LoginInteractor.swift in Sources */,
 				574DB5341E6479D300936C42 /* LoadingViewExtension.swift in Sources */,
 				57F484EA1E82D5710049F475 /* LoginPresenter.swift in Sources */,
@@ -677,6 +792,7 @@
 				57F484F01E83C4300049F475 /* RootRouter.swift in Sources */,
 				57031D2C1E69C55D0099A371 /* NavigationBarTheme.swift in Sources */,
 				57F484FD1E83CDDA0049F475 /* CustomersBuilder.swift in Sources */,
+				57F485071E8563810049F475 /* AppUserDefault.swift in Sources */,
 				57972E641E7822FF00FD2B83 /* BaseTextField.swift in Sources */,
 				5714C8011E64591900B8DD8B /* AppDelegate.swift in Sources */,
 				57AA02E11E67030B004068CC /* ErrorManager.swift in Sources */,
@@ -884,6 +1000,7 @@
 		};
 		5714C7FA1E6458E300B8DD8B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0338D744292704099F15C482 /* Pods-ViseoRestoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -898,6 +1015,7 @@
 		};
 		5714C7FB1E6458E300B8DD8B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F114FDFA0B98B71383D38DC /* Pods-ViseoRestoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -912,6 +1030,7 @@
 		};
 		5714C7FD1E6458E300B8DD8B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BD073D97BBD7FE3EB6CC818 /* Pods-ViseoRestoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = ViseoRestoUITests/Info.plist;
@@ -925,6 +1044,7 @@
 		};
 		5714C7FE1E6458E300B8DD8B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5B55B01ECA8A612E7B90FC4 /* Pods-ViseoRestoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = ViseoRestoUITests/Info.plist;

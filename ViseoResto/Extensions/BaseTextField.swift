@@ -10,6 +10,8 @@ import UIKit
 
 public class BaseTextField: UITextField {
   
+  let padding: CGFloat = 10.0
+  
   override init(frame: CGRect) {
     super.init(frame: frame)
     self.setup()
@@ -57,5 +59,19 @@ public class BaseTextField: UITextField {
     super.updateConstraints()
    
     self.heightAnchor.constraint(equalToConstant: 40).isActive = true
+  }
+  
+  override public func textRect(forBounds bounds: CGRect) -> CGRect {
+    var rect = bounds
+    rect.origin.x = rect.origin.x + padding
+    
+    return rect
+  }
+  
+  override public func editingRect(forBounds bounds: CGRect) -> CGRect {
+    var rect = bounds
+    rect.origin.x = rect.origin.x + padding
+    
+    return rect
   }
 }

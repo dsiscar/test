@@ -17,11 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     _ application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
   
-    NavigationBarTheme().apply()
+    NavigationBarTheme().apply(withTheme: .viseo)
+    
     window = UIWindow(frame: UIScreen.main.bounds)
-
-    let wireframe = RootRouter()
-    wireframe.bootstrap(onWindow: window!)
+    RootRouter().bootstrap(onWindow: window!)
     
     return true
   }

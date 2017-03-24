@@ -51,7 +51,7 @@ class CustomersDefaultPresenter: CustomersPresenter {
   }
   
   func didSelectCustomer(_ customer: Customer) {
-    router.presentDetails(forCustomer: customer)
+    router.showDetails(forCustomer: customer)
   }
   
   func logoff() {

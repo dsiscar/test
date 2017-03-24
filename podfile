@@ -9,6 +9,20 @@ target 'ViseoResto' do
   pod 'RxCocoa', '~> 3.0'
   pod 'PKHUD', '~> 4.0'
   pod 'Swinject', '~> 2.0.0'
+  pod 'SwiftyJSON'
+end
+
+def testing_pods
+    pod 'Quick'
+    pod 'Nimble'
+end
+
+target 'ViseoRestoTests' do
+    testing_pods
+end
+
+target 'ViseoRestoUITests' do
+    testing_pods
 end
 
 post_install do |installer|
